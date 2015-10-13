@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="description" content="Tabbed content sections with plain Javascript.">
+
+	<title>Simple Vanilla Javascript Tabs</title>
+
+	<link rel="icon" type="image/png" href="/assets/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/assets/favicon-16x16.png" sizes="16x16">
+
+	<link rel="stylesheet" href="/css/main.css">
+
+	<link rel="canonical" href="http://carolyncodes.com/vanilla-javascript/2015/09/15/simple-vanilla-js-tabs.html">
+	<link rel="alternate" type="application/rss+xml" title="Carolyn Codes" href="http://carolyncodes.com/feed.xml" />
+
+	<!-- FB Open Graph -->
+	<meta property="og:url" content="http://carolyncodes.com/vanilla-javascript/2015/09/15/simple-vanilla-js-tabs.html">
+	<meta property="og:title" content="Simple Vanilla Javascript Tabs">
+	<meta property="og:description" content="Front End Development Blog">
+	<meta property="og:image" content="http://carolyncodes.com/assets/og-icon.jpg">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:image:width" content="170">
+	<meta property="og:image:height" content="145">
+	<meta property="og:locale" content="en_US">
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-67856070-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+</head>
+
+	<body class="gold">
+
+		<header class="u-full-width header--main u-cf">
+
+	<div class="container">
+
+		<a class="logo--header" href="/">
+			<span></span>
+			<span></span>
+		</a>
+
+<!-- 
+		<ul id="switcher">
+			<li id="pinkBtn" class="active"></li>
+			<li id="goldBtn"></li>
+			<li id="blueBtn"></li>
+		</ul>
+ -->
+
+		<nav class="nav--main">
+			
+				
+			
+				
+				<a class="page-link" href="/contact-me/">Contact Me</a>
+				
+			
+				
+				<a class="page-link" href="/experience/">Experience</a>
+				
+			
+				
+			
+				
+			
+				
+			
+				
+				<a class="page-link" href="/skills/">Skills</a>
+				
+			
+		</nav>
+
+		<div class="border"></div>
+
+	</div>
+
+</header>
+
+
+		<div class="u-full-width u-full-width--main">
+			<div class="container content--main">
+				<div class="post">
+
+	<header class="post-header">
+		<h6 class="post-meta">Sep 15, 2015</h6>
+		<h1>Simple Vanilla Javascript Tabs</h1>
+	</header>
+
+	<article class="twelve columns">
+		<p>Tabbed content sections with plain Javascript.</p>
+
+<p data-height="300" data-theme-id="0" data-slug-hash="MawmVb" data-default-tab="result" data-user="carolynvelez" class="codepen">See the Pen <a href="http://codepen.io/carolynvelez/pen/MawmVb/">Simple Vanilla Javascript Tabs</a> by Carolyn Velez (<a href="http://codepen.io/carolynvelez">@carolynvelez</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h4 id="setting-up-the-tabs">Setting up the tabs</h4>
+
+<p>When the user clicks on a tab, we want to remove the “active” class from all the tabs and add it to the one that has just been clicked.</p>
+
+<p>Each list item that represents a tab has the class .nav-tabs. Use <em>.querySelectorAll</em> to get all the elements on the page with that class name and store them as a variable.</p>
+
+<p>Write a function that will handle what happens when the user clicks on a tab and create an argument for the event. Inside the function, use a <em>for loop</em> to iterate through each of the tabs created in the myTabs array and remove the “active” class.</p>
+
+<p>Store a variable inside the function for adding the “active” class to the tab that’s just been clicked. Create a variable to store the tab click event. Get the target of the clicked tab is the href, so we use <em>.currentTarget</em> to get the list item that contains then href. Then we add the active class using <em>classList.add</em>.</p>
+
+<p>Let’s also add <em>.preventDefault()</em> to keep from reloading the page.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">var</span> <span class="n">myTabs</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;ul.nav-tabs &gt; li&quot;</span><span class="p">);</span>
+
+<span class="n">function</span> <span class="n">myTabClicks</span><span class="p">(</span><span class="n">tabClickEvent</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">for</span> <span class="p">(</span><span class="n">var</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">myTabs</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">myTabs</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="n">classList</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="n">var</span> <span class="n">clickedTab</span> <span class="o">=</span> <span class="n">tabClickEvent</span><span class="o">.</span><span class="n">currentTarget</span><span class="p">;</span> 
+
+	<span class="n">clickedTab</span><span class="o">.</span><span class="n">classList</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">);</span>
+	<span class="n">tabClickEvent</span><span class="o">.</span><span class="n">preventDefault</span><span class="p">();</span>
+<span class="p">}</span></code></pre></div>
+
+<h4 id="setting-up-the-content-panes">Setting up the content panes</h4>
+
+<p><strong>When the user clicks on a tab, we want to hide the currently active pane and make the content pane that currently corresponds to the clicked tab visible.</strong></p>
+
+<p>First we want to store all the items with the class “tab-pane” in a variable. Then use another <em>for loop</em> to iterate through the array of myContentPanes like we did with myTabs to remove the active class from all them. Reference the tabClickEvent target and use that to grab the href. Use that to reference the pane you want to be visible and add the “active” class.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">var</span> <span class="n">myContentPanes</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;.tab-pane&quot;</span><span class="p">);</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">myContentPanes</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">myContentPanes</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="n">classList</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="n">var</span> <span class="n">anchorReference</span> <span class="o">=</span> <span class="n">tabClickEvent</span><span class="o">.</span><span class="n">target</span><span class="p">;</span>
+	<span class="n">var</span> <span class="n">activePaneId</span> <span class="o">=</span> <span class="n">anchorReference</span><span class="o">.</span><span class="n">getAttribute</span><span class="p">(</span><span class="s2">&quot;href&quot;</span><span class="p">);</span>
+	<span class="n">var</span> <span class="n">activePane</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">querySelector</span><span class="p">(</span><span class="n">activePaneId</span><span class="p">);</span>
+
+	<span class="n">activePane</span><span class="o">.</span><span class="n">classList</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+
+	</article>
+
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'carolyncodes';
+
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+			</div>
+		</div>
+
+		<footer class="u-full-width footer--main">
+
+	<div class="container">
+
+		<div class="four columns column--brain-icon">
+			<img src="/assets/icon-carolyncodes-reverse.svg" class="graphic-icon" alt="Brainz!">
+			<div class="row">
+				<h3><a href="/">carolyncodes.com</a></h3>
+				<p><a href="mailto:"></a></p>
+			</div>
+		</div>
+
+		<div class="eight columns">
+			<div class="row row--sm-icons">
+				<a href="https://www.linkedin.com/in/carolyngreenoughvelez" title="LinkedIn" target="_blank" class="linkedin"></a>
+				<!-- <a href="https://github.com/carolynvelez" title="GitHub" target="_blank" class="github"></a> -->
+				<a href="http://codepen.io/carolynvelez" title="CodePen" target="_blank" class="codepen"></a>
+ 			</div>
+			<div class="row">
+				<p class="text-small">CarolynCodes.com is created, written and maintained by Carolyn Velez. It is built using static generator <a href="https://jekyllrb.com/" title="Jekyll" target="_blank">Jekyll</a> and responsive boilerplate <a href="http://getskeleton.com/" title="Skeleton" target="_blank">Skeleton</a>. And of course HTML, CSS3 and <a href="http://sass-lang.com/" title="Sass" target="_blank">Sass</a>. Branding by <a href="http://joyrubincreative.com/" title="Joy Rubin Creative" target="_blank">Joy Rubin Creative</a>.</p>
+				<p class="text-small">&copy; Copyright 2015 Carolyn Velez.</p>
+			</div>
+		</div>
+
+	</div>
+
+</footer>
+
+
+	</body>
+
+	<!-- FB App -->
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '1544532899119284',
+				xfbml      : true,
+				version    : 'v2.4'
+			});
+		};
+
+		(function(d, s, id){
+			 var js, fjs = d.getElementsByTagName(s)[0];
+			 if (d.getElementById(id)) {return;}
+			 js = d.createElement(s); js.id = id;
+			 js.src = "//connect.facebook.net/en_US/sdk.js";
+			 fjs.parentNode.insertBefore(js, fjs);
+		 }(document, 'script', 'facebook-jssdk'));
+	</script>
+
+</html>

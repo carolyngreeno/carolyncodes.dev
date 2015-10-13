@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="description" content="I’m using a dotted border to go along with my new branding. I’ve never been too happy with the option CSS border-style provides so I looked for a better solu...">
+
+	<title>Build a Better Border</title>
+
+	<link rel="icon" type="image/png" href="/assets/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/assets/favicon-16x16.png" sizes="16x16">
+
+	<link rel="stylesheet" href="/css/main.css">
+
+	<link rel="canonical" href="http://carolyncodes.com/css/2015/10/10/better-dotted-css-border.html">
+	<link rel="alternate" type="application/rss+xml" title="Carolyn Codes" href="http://carolyncodes.com/feed.xml" />
+
+	<!-- FB Open Graph -->
+	<meta property="og:url" content="http://carolyncodes.com/css/2015/10/10/better-dotted-css-border.html">
+	<meta property="og:title" content="Build a Better Border">
+	<meta property="og:description" content="Front End Development Blog">
+	<meta property="og:image" content="http://carolyncodes.com/assets/og-icon.jpg">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:image:width" content="170">
+	<meta property="og:image:height" content="145">
+	<meta property="og:locale" content="en_US">
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-67856070-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+</head>
+
+	<body class="gold">
+
+		<header class="u-full-width header--main u-cf">
+
+	<div class="container">
+
+		<a class="logo--header" href="/">
+			<span></span>
+			<span></span>
+		</a>
+
+<!-- 
+		<ul id="switcher">
+			<li id="pinkBtn" class="active"></li>
+			<li id="goldBtn"></li>
+			<li id="blueBtn"></li>
+		</ul>
+ -->
+
+		<nav class="nav--main">
+			
+				
+			
+				
+				<a class="page-link" href="/contact-me/">Contact Me</a>
+				
+			
+				
+				<a class="page-link" href="/experience/">Experience</a>
+				
+			
+				
+			
+				
+			
+				
+			
+				
+				<a class="page-link" href="/skills/">Skills</a>
+				
+			
+		</nav>
+
+		<div class="border"></div>
+
+	</div>
+
+</header>
+
+
+		<div class="u-full-width u-full-width--main">
+			<div class="container content--main">
+				<div class="post">
+
+	<header class="post-header">
+		<h6 class="post-meta">Oct 10, 2015</h6>
+		<h1>Build a Better Border</h1>
+	</header>
+
+	<article class="twelve columns">
+		<p>I’m using a dotted border to go along with my new branding. I’ve never been too happy with the option CSS border-style provides so I looked for a better solution and I found one <a href="http://ilikekillnerds.com/2012/05/better-dotted-css-borders-using-the-after-pseudo-selector/" target="_blank">here</a>.</p>
+
+<div data-height="200" data-theme-id="0" data-slug-hash="gaxbgg" data-default-tab="result" data-user="carolynvelez" class="codepen">See the Pen <a href="http://codepen.io/carolynvelez/pen/gaxbgg/">Fancy Dotted Borders</a> by Carolyn Velez (<a href="http://codepen.io/carolynvelez">@carolynvelez</a>) on <a href="http://codepen.io">CodePen</a>.</div>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h5 id="step-1">Step 1</h5>
+<p>I added HTML to a page for three different border variations. I like to use BEM renaming methodology so I created a base style named “dotted-rule” and using Sass, I appended that name with the names of the variations. It keeps thing organized and easy to track down when I need to make changes.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;dotted-rule dotted-rule--slate&quot;</span><span class="o">&gt;&lt;</span><span class="sr">/div&gt;</span>
+<span class="sr">&lt;div class=&quot;dotted-rule dotted-rule--pink&quot;&gt;&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;dotted-rule dotted-rule--gold&quot;</span><span class="o">&gt;&lt;</span><span class="sr">/div&gt;</span>
+<span class="sr">&lt;div class=&quot;dotted-rule dotted-rule--blue&quot;&gt;&lt;/</span><span class="n">div</span><span class="o">&gt;</span></code></pre></div>
+
+<h5 id="step-2">Step 2</h5>
+<p>Create the base style for the border. Some of the properties are optional depending on what you’re doing. I’ve added comments to the ones that arean’t.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">.</span><span class="n">dotted</span><span class="o">-</span><span class="n">rule</span> <span class="p">{</span>
+	<span class="nb">display</span><span class="p">:</span> <span class="n">block</span><span class="p">;</span>
+	<span class="ss">margin</span><span class="p">:</span> <span class="mi">5</span><span class="n">px</span> <span class="mi">0</span> <span class="mi">5</span><span class="n">px</span> <span class="mi">0</span><span class="p">;</span>
+	
+	<span class="sr">/* This keeps content from showing up outside the container */</span>
+	<span class="ss">overflow</span><span class="p">:</span> <span class="n">hidden</span><span class="p">;</span>
+
+	<span class="sr">/* Remove all padding */</span>
+	<span class="ss">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+
+	<span class="sr">/* Give it a line-height of &#39;1&#39; to control the height */</span>
+	<span class="n">line</span><span class="o">-</span><span class="ss">height</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span></code></pre></div>
+
+<h5 id="step-3">Step 3</h5>
+<p>Add the pseudo-selector :after. Make sure to use ‘display: block’ or you won’t see your border and add more periods to the content property than you think you’ll need. Adjust the font size to to size dots you want.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">.</span><span class="n">dotted</span><span class="o">-</span><span class="n">rule</span> <span class="p">{</span> <span class="o">.</span><span class="n">.</span>
+	<span class="o">&amp;</span><span class="ss">:after</span> <span class="p">{</span>
+		<span class="ss">content</span><span class="p">:</span> <span class="s1">&#39;..........................................................&#39;</span><span class="p">;</span>
+		<span class="nb">display</span><span class="p">:</span> <span class="n">block</span><span class="p">;</span>
+		<span class="n">margin</span><span class="o">-</span><span class="ss">top</span><span class="p">:</span> <span class="o">-</span><span class="mi">5</span><span class="n">px</span><span class="p">;</span>
+		<span class="n">font</span><span class="o">-</span><span class="ss">size</span><span class="p">:</span> <span class="mi">4</span><span class="n">rem</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<h5 id="step-4">Step 4</h5>
+<p>I wanted a few variations, I used different font-families, font-sizes and letter-spacing to get different effects.</p>
+
+<p>Here I used chose to use Arial because the period character looks like a block instead of a circle, give it a just a little more spacing in between each character, use the color pink and adjusted the font-size to exactly where I wanted it.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">.</span><span class="n">dotted</span><span class="o">-</span><span class="n">rule</span> <span class="p">{</span> <span class="o">.</span><span class="n">.</span>
+	<span class="o">&amp;</span><span class="ss">:after</span> <span class="p">{</span> <span class="o">.</span><span class="n">.</span> <span class="p">}</span>
+	<span class="o">&amp;--</span><span class="n">slate</span> <span class="p">{</span>
+		<span class="o">&amp;</span><span class="ss">:after</span> <span class="p">{</span>
+			<span class="n">font</span><span class="o">-</span><span class="ss">size</span><span class="p">:</span> <span class="mi">4</span><span class="n">rem</span><span class="p">;</span>
+			<span class="n">font</span><span class="o">-</span><span class="ss">family</span><span class="p">:</span> <span class="no">Arial</span><span class="p">,</span> <span class="n">sans</span><span class="o">-</span><span class="n">serif</span><span class="p">;</span>
+			<span class="ss">color</span><span class="p">:</span> <span class="c1">#ff5776;</span>
+			<span class="n">letter</span><span class="o">-</span><span class="ss">spacing</span><span class="p">:</span> <span class="mi">10</span><span class="n">px</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Here I adjusted the letter-spacing to a negative amount to make the line a bit more solid but not quite.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">.</span><span class="n">dotted</span><span class="o">-</span><span class="n">rule</span> <span class="p">{</span> <span class="o">.</span><span class="n">.</span>
+	<span class="o">&amp;</span><span class="ss">:after</span> <span class="p">{</span> <span class="o">.</span><span class="n">.</span> <span class="p">}</span>
+	<span class="o">&amp;--</span><span class="n">pink</span> <span class="p">{</span>
+		<span class="o">&amp;</span><span class="ss">:after</span> <span class="p">{</span>
+			<span class="n">font</span><span class="o">-</span><span class="ss">size</span><span class="p">:</span> <span class="mi">4</span><span class="n">rem</span><span class="p">;</span>
+			<span class="n">font</span><span class="o">-</span><span class="ss">family</span><span class="p">:</span> <span class="no">Georgia</span><span class="p">,</span> <span class="n">serif</span><span class="p">;</span>
+			<span class="ss">color</span><span class="p">:</span> <span class="c1">#fcaf35;</span>
+			<span class="n">letter</span><span class="o">-</span><span class="ss">spacing</span><span class="p">:</span> <span class="o">-</span><span class="mi">5</span><span class="n">px</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>I wanted a border with characters that looked more organic and less symetrical so I used Google Font, “Special Elite”.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">.</span><span class="n">dotted</span><span class="o">-</span><span class="n">rule</span> <span class="p">{</span> <span class="o">.</span><span class="n">.</span>
+	<span class="o">&amp;</span><span class="ss">:after</span> <span class="p">{</span> <span class="o">.</span><span class="n">.</span> <span class="p">}</span>
+	<span class="o">&amp;--</span><span class="n">gold</span> <span class="p">{</span>
+		<span class="o">&amp;</span><span class="ss">:after</span> <span class="p">{</span>
+			<span class="n">font</span><span class="o">-</span><span class="ss">size</span><span class="p">:</span> <span class="mi">4</span><span class="n">rem</span><span class="p">;</span>
+			<span class="n">font</span><span class="o">-</span><span class="ss">family</span><span class="p">:</span> <span class="n">georgia</span><span class="p">,</span> <span class="n">serif</span><span class="p">;</span>
+			<span class="ss">color</span><span class="p">:</span> <span class="c1">#fcaf35;</span>
+			<span class="n">letter</span><span class="o">-</span><span class="ss">spacing</span><span class="p">:</span> <span class="o">-</span><span class="mi">5</span><span class="n">px</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>So there’s nothing earth shattering here but it’s kind of cool trick.</p>
+
+<p>References:<br />
+<a href="https://jekyllrb.com/" target="_blank">Better Dotted CSS Borders Using the :after Pseudo-selector</a></p>
+
+	</article>
+
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'carolyncodes';
+
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+			</div>
+		</div>
+
+		<footer class="u-full-width footer--main">
+
+	<div class="container">
+
+		<div class="four columns column--brain-icon">
+			<img src="/assets/icon-carolyncodes-reverse.svg" class="graphic-icon" alt="Brainz!">
+			<div class="row">
+				<h3><a href="/">carolyncodes.com</a></h3>
+				<p><a href="mailto:"></a></p>
+			</div>
+		</div>
+
+		<div class="eight columns">
+			<div class="row row--sm-icons">
+				<a href="https://www.linkedin.com/in/carolyngreenoughvelez" title="LinkedIn" target="_blank" class="linkedin"></a>
+				<!-- <a href="https://github.com/carolynvelez" title="GitHub" target="_blank" class="github"></a> -->
+				<a href="http://codepen.io/carolynvelez" title="CodePen" target="_blank" class="codepen"></a>
+ 			</div>
+			<div class="row">
+				<p class="text-small">CarolynCodes.com is created, written and maintained by Carolyn Velez. It is built using static generator <a href="https://jekyllrb.com/" title="Jekyll" target="_blank">Jekyll</a> and responsive boilerplate <a href="http://getskeleton.com/" title="Skeleton" target="_blank">Skeleton</a>. And of course HTML, CSS3 and <a href="http://sass-lang.com/" title="Sass" target="_blank">Sass</a>. Branding by <a href="http://joyrubincreative.com/" title="Joy Rubin Creative" target="_blank">Joy Rubin Creative</a>.</p>
+				<p class="text-small">&copy; Copyright 2015 Carolyn Velez.</p>
+			</div>
+		</div>
+
+	</div>
+
+</footer>
+
+
+	</body>
+
+	<!-- FB App -->
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '1544532899119284',
+				xfbml      : true,
+				version    : 'v2.4'
+			});
+		};
+
+		(function(d, s, id){
+			 var js, fjs = d.getElementsByTagName(s)[0];
+			 if (d.getElementById(id)) {return;}
+			 js = d.createElement(s); js.id = id;
+			 js.src = "//connect.facebook.net/en_US/sdk.js";
+			 fjs.parentNode.insertBefore(js, fjs);
+		 }(document, 'script', 'facebook-jssdk'));
+	</script>
+
+</html>

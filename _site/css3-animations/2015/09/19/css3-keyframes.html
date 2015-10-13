@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="description" content="This is a super sassy first attempt at working with CSS3 animations. I wanted to get an idea of how to work with the keyframes especially so I created this b...">
+
+	<title>Super Sassy Keyframes</title>
+
+	<link rel="icon" type="image/png" href="/assets/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/assets/favicon-16x16.png" sizes="16x16">
+
+	<link rel="stylesheet" href="/css/main.css">
+
+	<link rel="canonical" href="http://carolyncodes.com/css3-animations/2015/09/19/css3-keyframes.html">
+	<link rel="alternate" type="application/rss+xml" title="Carolyn Codes" href="http://carolyncodes.com/feed.xml" />
+
+	<!-- FB Open Graph -->
+	<meta property="og:url" content="http://carolyncodes.com/css3-animations/2015/09/19/css3-keyframes.html">
+	<meta property="og:title" content="Super Sassy Keyframes">
+	<meta property="og:description" content="Front End Development Blog">
+	<meta property="og:image" content="http://carolyncodes.com/assets/og-icon.jpg">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:image:width" content="170">
+	<meta property="og:image:height" content="145">
+	<meta property="og:locale" content="en_US">
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-67856070-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+</head>
+
+	<body class="gold">
+
+		<header class="u-full-width header--main u-cf">
+
+	<div class="container">
+
+		<a class="logo--header" href="/">
+			<span></span>
+			<span></span>
+		</a>
+
+<!-- 
+		<ul id="switcher">
+			<li id="pinkBtn" class="active"></li>
+			<li id="goldBtn"></li>
+			<li id="blueBtn"></li>
+		</ul>
+ -->
+
+		<nav class="nav--main">
+			
+				
+			
+				
+				<a class="page-link" href="/contact-me/">Contact Me</a>
+				
+			
+				
+				<a class="page-link" href="/experience/">Experience</a>
+				
+			
+				
+			
+				
+			
+				
+			
+				
+				<a class="page-link" href="/skills/">Skills</a>
+				
+			
+		</nav>
+
+		<div class="border"></div>
+
+	</div>
+
+</header>
+
+
+		<div class="u-full-width u-full-width--main">
+			<div class="container content--main">
+				<div class="post">
+
+	<header class="post-header">
+		<h6 class="post-meta">Sep 19, 2015</h6>
+		<h1>Super Sassy Keyframes</h1>
+	</header>
+
+	<article class="twelve columns">
+		<p>This is a super sassy first attempt at working with CSS3 animations. I wanted to get an idea of how to work with the keyframes especially so I created this basic implementation.</p>
+
+<p data-height="400" data-theme-id="0" data-slug-hash="epzNzx" data-default-tab="result" data-user="carolynvelez" class="codepen">See the Pen <a href="http://codepen.io/carolynvelez/pen/epzNzx/">Sassy Keyframes</a> by Carolyn Velez (<a href="http://codepen.io/carolynvelez">@carolynvelez</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>Started with the markup, I created a container with overflow: hidden so I could give the blocks a negative margin and they would appear to move into the viewable area from off the screen.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;container-box&quot;</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="n">span</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;block one--one icons&quot;</span><span class="o">&gt;&lt;</span><span class="sr">/span&gt;</span>
+<span class="sr">	&lt;span class=&quot;block one--two&quot;&gt;&lt;/s</span><span class="n">pan</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="n">span</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;block one--three&quot;</span><span class="o">&gt;&lt;</span><span class="sr">/span&gt;</span>
+<span class="sr">&lt;/</span><span class="n">div</span><span class="o">&gt;</span></code></pre></div>
+
+<p>I wanted to move each block in the brain icon independently so I assigned a separate class for each block. Here’s an example of the keyframe declaration for the first block. I simply wanted the block to start at one point (0%) and end at another (100%).</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="vi">@keyframes</span> <span class="n">animOneOne</span> <span class="p">{</span>
+	<span class="mi">0</span><span class="o">%</span>    <span class="p">{</span> <span class="ss">top</span><span class="p">:</span> <span class="o">-</span><span class="mi">50</span><span class="n">px</span><span class="p">;</span> <span class="ss">left</span><span class="p">:</span> <span class="mi">100</span><span class="n">px</span><span class="p">;</span> <span class="p">}</span>
+	<span class="mi">100</span><span class="o">%</span>  <span class="p">{</span> <span class="ss">top</span><span class="p">:</span> <span class="mi">100</span><span class="n">px</span><span class="p">;</span> <span class="ss">left</span><span class="p">:</span> <span class="mi">100</span><span class="n">px</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>I had to search a little to figure out how to get the block to stay in the same place that the animation ended. The default is for the positioning to reset to the blocks original location. The answer was to use the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode" target="_blank">animation-fill-mode</a> property and give it “forwards” value. That allows it to retain the positioning the animation ended on.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">.</span><span class="n">one</span> <span class="p">{</span>
+	<span class="o">&amp;--</span><span class="n">one</span> <span class="p">{</span>
+		<span class="ss">animation</span><span class="p">:</span> <span class="n">animOneOne</span> <span class="mi">1</span><span class="n">s</span> <span class="mi">1</span> <span class="n">forwards</span><span class="p">;</span>
+	<span class="p">}</span></code></pre></div>
+
+<p>Then I used that animation in my class for “block one–one”. I only want the animation to run once so in the shortcut I included “1” to indicate that I only wanted one iteration and I used 1s as the length of time the animation would run.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">.</span><span class="n">one</span> <span class="p">{</span>
+	<span class="o">&amp;--</span><span class="n">one</span> <span class="p">{</span>
+		<span class="ss">animation</span><span class="p">:</span> <span class="n">animOneOne</span> <span class="mi">1</span><span class="n">s</span> <span class="mi">1</span> <span class="n">forwards</span><span class="p">;</span>
+		<span class="n">animation</span><span class="o">-</span><span class="ss">delay</span><span class="p">:</span> <span class="o">.</span><span class="mi">5</span><span class="n">s</span><span class="p">;</span>
+		<span class="n">animation</span><span class="o">-</span><span class="n">timing</span><span class="o">-</span><span class="ss">function</span><span class="p">:</span> <span class="n">ease</span><span class="o">-</span><span class="n">out</span><span class="p">;</span>
+		<span class="ss">top</span><span class="p">:</span> <span class="o">-</span><span class="mi">50</span><span class="n">px</span><span class="p">;</span>
+		<span class="ss">left</span><span class="p">:</span> <span class="mi">100</span><span class="n">px</span><span class="p">;</span>
+		<span class="ss">background</span><span class="p">:</span> <span class="vg">$color</span><span class="o">-</span><span class="n">slate</span><span class="p">;</span>
+	<span class="p">}</span></code></pre></div>
+
+<p>That’s basically it. There’s lots of CSS because I did the same thing over and over for each one. I’m thinking there’s probably a better way to do that by utilizing Sass functions or something. I’ll save that one for another day.</p>
+
+<p><strong>And hey, don’t forget your -webkit- prefixes! You need them for Safari (so of course iOS). And keep in mind that animations are not supported for IE9 down. I make these mistakes so you don’t have to.</strong></p>
+
+<p>References:<br />
+<a href="https://css-tricks.com/snippets/css/keyframe-animation-syntax/" target="_blank">CSS Tricks</a><br />
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" target="_blank">MDN: CSS Animations</a></p>
+
+	</article>
+
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'carolyncodes';
+
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+			</div>
+		</div>
+
+		<footer class="u-full-width footer--main">
+
+	<div class="container">
+
+		<div class="four columns column--brain-icon">
+			<img src="/assets/icon-carolyncodes-reverse.svg" class="graphic-icon" alt="Brainz!">
+			<div class="row">
+				<h3><a href="/">carolyncodes.com</a></h3>
+				<p><a href="mailto:"></a></p>
+			</div>
+		</div>
+
+		<div class="eight columns">
+			<div class="row row--sm-icons">
+				<a href="https://www.linkedin.com/in/carolyngreenoughvelez" title="LinkedIn" target="_blank" class="linkedin"></a>
+				<!-- <a href="https://github.com/carolynvelez" title="GitHub" target="_blank" class="github"></a> -->
+				<a href="http://codepen.io/carolynvelez" title="CodePen" target="_blank" class="codepen"></a>
+ 			</div>
+			<div class="row">
+				<p class="text-small">CarolynCodes.com is created, written and maintained by Carolyn Velez. It is built using static generator <a href="https://jekyllrb.com/" title="Jekyll" target="_blank">Jekyll</a> and responsive boilerplate <a href="http://getskeleton.com/" title="Skeleton" target="_blank">Skeleton</a>. And of course HTML, CSS3 and <a href="http://sass-lang.com/" title="Sass" target="_blank">Sass</a>. Branding by <a href="http://joyrubincreative.com/" title="Joy Rubin Creative" target="_blank">Joy Rubin Creative</a>.</p>
+				<p class="text-small">&copy; Copyright 2015 Carolyn Velez.</p>
+			</div>
+		</div>
+
+	</div>
+
+</footer>
+
+
+	</body>
+
+	<!-- FB App -->
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '1544532899119284',
+				xfbml      : true,
+				version    : 'v2.4'
+			});
+		};
+
+		(function(d, s, id){
+			 var js, fjs = d.getElementsByTagName(s)[0];
+			 if (d.getElementById(id)) {return;}
+			 js = d.createElement(s); js.id = id;
+			 js.src = "//connect.facebook.net/en_US/sdk.js";
+			 fjs.parentNode.insertBefore(js, fjs);
+		 }(document, 'script', 'facebook-jssdk'));
+	</script>
+
+</html>

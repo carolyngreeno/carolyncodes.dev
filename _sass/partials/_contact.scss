@@ -1,0 +1,14 @@
+.contact-page {
+	a img {
+		float: none;
+		width: 40px;
+		height: auto;
+		margin-right: 10px;
+	}
+
+	a {
+		&:hover {
+			border: none;			
+		}
+	}
+}

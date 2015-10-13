@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="description" content="That was the interview question that marked the beginning of my realization that even though I’d been doing some form of web development for several years, I...">
+
+	<title>"Explain the box model."</title>
+
+	<link rel="icon" type="image/png" href="/assets/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/assets/favicon-16x16.png" sizes="16x16">
+
+	<link rel="stylesheet" href="/css/main.css">
+
+	<link rel="canonical" href="http://carolyncodes.com/css/2015/09/22/the-box-model.html">
+	<link rel="alternate" type="application/rss+xml" title="Carolyn Codes" href="http://carolyncodes.com/feed.xml" />
+
+	<!-- FB Open Graph -->
+	<meta property="og:url" content="http://carolyncodes.com/css/2015/09/22/the-box-model.html">
+	<meta property="og:title" content=""Explain the box model."">
+	<meta property="og:description" content="Front End Development Blog">
+	<meta property="og:image" content="http://carolyncodes.com/assets/og-icon.jpg">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:image:width" content="170">
+	<meta property="og:image:height" content="145">
+	<meta property="og:locale" content="en_US">
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-67856070-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+</head>
+
+	<body class="gold">
+
+		<header class="u-full-width header--main u-cf">
+
+	<div class="container">
+
+		<a class="logo--header" href="/">
+			<span></span>
+			<span></span>
+		</a>
+
+<!-- 
+		<ul id="switcher">
+			<li id="pinkBtn" class="active"></li>
+			<li id="goldBtn"></li>
+			<li id="blueBtn"></li>
+		</ul>
+ -->
+
+		<nav class="nav--main">
+			
+				
+			
+				
+				<a class="page-link" href="/contact-me/">Contact Me</a>
+				
+			
+				
+				<a class="page-link" href="/experience/">Experience</a>
+				
+			
+				
+			
+				
+			
+				
+			
+				
+				<a class="page-link" href="/skills/">Skills</a>
+				
+			
+		</nav>
+
+		<div class="border"></div>
+
+	</div>
+
+</header>
+
+
+		<div class="u-full-width u-full-width--main">
+			<div class="container content--main">
+				<div class="post">
+
+	<header class="post-header">
+		<h6 class="post-meta">Sep 22, 2015</h6>
+		<h1>"Explain the box model."</h1>
+	</header>
+
+	<article class="twelve columns">
+		<p>That was the interview question that marked the beginning of my realization that even though I’d been doing some form of web development for 
+several years, I couldn’t explain the whys behind why one thing worked and another thing didn’t. I quickly saw that if I didn’t get my left 
+brain in gear I wasn’t going to be as effective. Hence this blog.</p>
+
+<p><img src="/assets/posts/2015-09-22.jpg" alt="A girl needs to keep up" /></p>
+
+<h3 id="a-brief-explanation"><strong>A Brief Explanation</strong></h3>
+
+<p>This is what I’m putting in my pocket for the next time and interviewer asks me that question.</p>
+
+<p><strong>One:</strong> The box model is a CSS term.</p>
+
+<p><strong>Two:</strong> Any HTML element can be considered a box.</p>
+
+<p><strong>Three:</strong> The point of the box model is to define the amount of width and height an element (a box) takes up in the browser and how it’s positioned in relationship to other elements (other boxes).</p>
+
+<p><strong>Four:</strong> The box model has four parts: margin, border, padding and content.</p>
+
+<p><strong>Five:</strong> The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing" target="_blank">box-sizing</a> property is your friend. Box-sizing has two property values — content-box and border-box. A quick way of explaining each would be to say that the defaul, content-box width and height include only the content and border-box includes the content, padding and margin.</p>
+
+<p>I always make sure this is in my stylesheets:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">*</span> <span class="p">{</span> <span class="n">box</span><span class="o">-</span><span class="ss">sizing</span><span class="p">:</span> <span class="n">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span> <span class="p">}</span></code></pre></div>
+
+<h3 id="if-youre-visual-"><strong>If you’re visual …</strong></h3>
+
+<p>This your CSS with content-box (default):</p>
+
+<p data-height="268" data-theme-id="0" data-slug-hash="gawJxw" data-default-tab="result" data-user="carolynvelez" class="codepen">See the Pen <a href="http://codepen.io/carolynvelez/pen/gawJxw/">Box Model w/o border-box</a> by Carolyn Velez (<a href="http://codepen.io/carolynvelez">@carolynvelez</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>This your CSS with border-box:</p>
+
+<p data-height="300" data-theme-id="0" data-slug-hash="mergLY" data-default-tab="result" data-user="carolynvelez" class="codepen">See the Pen <a href="http://codepen.io/carolynvelez/pen/mergLY/">Box Model</a> by Carolyn Velez (<a href="http://codepen.io/carolynvelez">@carolynvelez</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>The world is much friendlier place when you use it because you don’t have to you calulate the border and padding into the width and height of the box to get the result you want. Just include box-sizing: border-box and you’re all set.</p>
+
+<p>At this point, current support for box-sizing is solid: Ch, Saf 5.1+, IE 8+, Op 9+</p>
+
+<p>Like I said … brief. There’s more you can read up on below but this is a basic overview.</p>
+
+<p>References:<br />
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing" target="_blank">MDN: Box-Sizing</a><br />
+<a href="https://www.addedbytes.com/articles/for-beginners/the-box-model-for-beginners/" target="_blank">AddedBytes: The Box Model for Beginners</a></p>
+
+	</article>
+
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'carolyncodes';
+
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+			</div>
+		</div>
+
+		<footer class="u-full-width footer--main">
+
+	<div class="container">
+
+		<div class="four columns column--brain-icon">
+			<img src="/assets/icon-carolyncodes-reverse.svg" class="graphic-icon" alt="Brainz!">
+			<div class="row">
+				<h3><a href="/">carolyncodes.com</a></h3>
+				<p><a href="mailto:"></a></p>
+			</div>
+		</div>
+
+		<div class="eight columns">
+			<div class="row row--sm-icons">
+				<a href="https://www.linkedin.com/in/carolyngreenoughvelez" title="LinkedIn" target="_blank" class="linkedin"></a>
+				<!-- <a href="https://github.com/carolynvelez" title="GitHub" target="_blank" class="github"></a> -->
+				<a href="http://codepen.io/carolynvelez" title="CodePen" target="_blank" class="codepen"></a>
+ 			</div>
+			<div class="row">
+				<p class="text-small">CarolynCodes.com is created, written and maintained by Carolyn Velez. It is built using static generator <a href="https://jekyllrb.com/" title="Jekyll" target="_blank">Jekyll</a> and responsive boilerplate <a href="http://getskeleton.com/" title="Skeleton" target="_blank">Skeleton</a>. And of course HTML, CSS3 and <a href="http://sass-lang.com/" title="Sass" target="_blank">Sass</a>. Branding by <a href="http://joyrubincreative.com/" title="Joy Rubin Creative" target="_blank">Joy Rubin Creative</a>.</p>
+				<p class="text-small">&copy; Copyright 2015 Carolyn Velez.</p>
+			</div>
+		</div>
+
+	</div>
+
+</footer>
+
+
+	</body>
+
+	<!-- FB App -->
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '1544532899119284',
+				xfbml      : true,
+				version    : 'v2.4'
+			});
+		};
+
+		(function(d, s, id){
+			 var js, fjs = d.getElementsByTagName(s)[0];
+			 if (d.getElementById(id)) {return;}
+			 js = d.createElement(s); js.id = id;
+			 js.src = "//connect.facebook.net/en_US/sdk.js";
+			 fjs.parentNode.insertBefore(js, fjs);
+		 }(document, 'script', 'facebook-jssdk'));
+	</script>
+
+</html>

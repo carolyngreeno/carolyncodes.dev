@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://carolyncodes.com/</loc>
+  <lastmod>2015-09-20T21:46:59+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://carolyncodes.com/contact-me/</loc>
+  <lastmod>2015-09-20T21:46:49+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://carolyncodes.com/experience/</loc>
+  <lastmod>2015-09-20T21:46:57+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://carolyncodes.com/skills/</loc>
+  <lastmod>2015-09-20T21:47:04+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://carolyncodes.com/css3-animations/2015/09/19/css3-keyframes.html</loc>
+  <lastmod>2015-09-20T21:46:55+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://carolyncodes.com/vanilla-javascript/2015/09/18/javascript-color-switcher.html</loc>
+  <lastmod>2015-09-20T21:47:12+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://carolyncodes.com/vanilla-javascript/2015/09/17/dom-drill01-vanilla-js.html</loc>
+  <lastmod>2015-09-20T21:47:11+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://carolyncodes.com/vanilla-javascript/2015/09/16/easy-vanilla-js-calculator.html</loc>
+  <lastmod>2015-09-20T21:47:10+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://carolyncodes.com/vanilla-javascript/2015/09/15/simple-vanilla-js-tabs.html</loc>
+  <lastmod>2015-09-20T21:47:09+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+</urlset>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="description" content="Earlier this year I had an interview exercise that involved using a static site generator. I don’t know how but I’d actually never heard of one before. But y...">
+
+	<title>Get started with Jekyll quickly</title>
+
+	<link rel="icon" type="image/png" href="/assets/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/assets/favicon-16x16.png" sizes="16x16">
+
+	<link rel="stylesheet" href="/css/main.css">
+
+	<link rel="canonical" href="http://carolyncodes.com/jekyll/github/2015/09/24/get-started-with-jekyll-quickly.html">
+	<link rel="alternate" type="application/rss+xml" title="Carolyn Codes" href="http://carolyncodes.com/feed.xml" />
+
+	<!-- FB Open Graph -->
+	<meta property="og:url" content="http://carolyncodes.com/jekyll/github/2015/09/24/get-started-with-jekyll-quickly.html">
+	<meta property="og:title" content="Get started with Jekyll quickly">
+	<meta property="og:description" content="Front End Development Blog">
+	<meta property="og:image" content="http://carolyncodes.com/assets/og-icon.jpg">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:image:width" content="170">
+	<meta property="og:image:height" content="145">
+	<meta property="og:locale" content="en_US">
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-67856070-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+</head>
+
+	<body class="gold">
+
+		<header class="u-full-width header--main u-cf">
+
+	<div class="container">
+
+		<a class="logo--header" href="/">
+			<span></span>
+			<span></span>
+		</a>
+
+<!-- 
+		<ul id="switcher">
+			<li id="pinkBtn" class="active"></li>
+			<li id="goldBtn"></li>
+			<li id="blueBtn"></li>
+		</ul>
+ -->
+
+		<nav class="nav--main">
+			
+				
+			
+				
+				<a class="page-link" href="/contact-me/">Contact Me</a>
+				
+			
+				
+				<a class="page-link" href="/experience/">Experience</a>
+				
+			
+				
+			
+				
+			
+				
+			
+				
+				<a class="page-link" href="/skills/">Skills</a>
+				
+			
+		</nav>
+
+		<div class="border"></div>
+
+	</div>
+
+</header>
+
+
+		<div class="u-full-width u-full-width--main">
+			<div class="container content--main">
+				<div class="post">
+
+	<header class="post-header">
+		<h6 class="post-meta">Sep 24, 2015</h6>
+		<h1>Get started with Jekyll quickly</h1>
+	</header>
+
+	<article class="twelve columns">
+		<p>Earlier this year I had an interview exercise that involved using a static site generator. I don’t know how but I’d actually never heard of one before. But you can bet I corrected that right away. I’ve worked with Node.js and it’s similar to that.</p>
+
+<p>Not having used a SSG before, it was struggle to complete the project in the twenty minutes they said it should have taken. Fail! Failure is just another step towards succes though. So I had to figure it out and I was immediately glad I did. As a longtime user of WordPress, this seemed much simpler, cleaner and there was no need to know PHP to make the most out of it. It’s also much, much lighter weight. WordPress seems to get bogged down quickly. With Jekyll all I needed was my console, my favorit text editor (in this case Sublime Text) and later, a GitHub account. One of the coolest things about it is that you can host your blog on GitHub for free while also enjoying all the features of their version control.</p>
+
+<p>I’ll walk you through the basic steps of creating your blog. On my next post, I’ll go through how to host your site on GitHub.</p>
+
+<h5 id="step-1-youre-gonna-need-ruby">Step 1) You’re gonna need Ruby.</h5>
+<p>If you’re on OSX or above, your machine comes with Ruby already installed. If you’re not sure, run this command in the console to check (for Macs).</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">ruby</span> <span class="o">-</span><span class="n">v</span></code></pre></div>
+
+<p>If you don’t already have it installed, <a href="https://www.ruby-lang.org/en/documentation/installation/" target="_blank">visit this page</a> to find the correct installation method for your machine.</p>
+
+<h5 id="step-2-install-jekyll">Step 2) Install Jekyll</h5>
+
+<p>Once you have Ruby installed, run this command to install Jekyll.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span></code></pre></div>
+
+<p>If you get an error relating to the version of RubyGems, you can update it like this:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">gem</span> <span class="n">update</span> <span class="o">--</span><span class="nb">system</span></code></pre></div>
+
+<h5 id="step-3-create-your-site">Step 3) Create your site</h5>
+<p>Using your console or command window, change directories into the one where you want your site to live and type the following:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">jekyll</span> <span class="kp">new</span> <span class="n">my</span><span class="o">-</span><span class="n">site</span><span class="o">-</span><span class="nb">name</span></code></pre></div>
+
+<p>Change directories into your new site folder.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">cd</span> <span class="n">my</span><span class="o">-</span><span class="n">site</span><span class="o">-</span><span class="nb">name</span></code></pre></div>
+
+<p>Once in the site directory, start the server.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">jekyll</span> <span class="n">serve</span></code></pre></div>
+
+<p>In your browser, navigate to <a href="http://localhost:4000">localhost:4000</a> and you’ll see your brand new jekyll site just waiting for you.</p>
+
+<h5 id="step-4-so-now-what">Step 4) So now what?</h5>
+
+<p>The first thing I wanted to do was customize the look. I started using Sass a couple of years ago and never looked back so I thought it was extra cool that Jekyll is already set up to watch and compile Sass files. In the past I’ve set up the compiling manually (a pain) or with CodeKit. You don’t need to do either with Jekyll.</p>
+
+<p>In the project folder, you’ll find a folder named “_sass”. That contains the partials you’ll want to add to and edit.</p>
+
+<p>You’ll also find a folder named “css” on the root. Inside that is a file named “main.css”. At the bottom of the file you can import the partials you want to include in the final output.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="vi">@import</span>
+	<span class="s2">&quot;normalize&quot;</span>             <span class="p">,</span> 
+	<span class="s2">&quot;skeleton&quot;</span>              <span class="p">,</span> 
+	<span class="s2">&quot;syntax-highlighting&quot;</span>   <span class="p">,</span> 
+	<span class="s2">&quot;partials/base&quot;</span>				
+<span class="p">;</span></code></pre></div>
+
+<h5 id="step-5-a-little-more-about-the-directory-structure-to-help-get-you-started-below-is-what-the-beginning-setup-looks-like">Step 5) A little more about the directory structure to help get you started. Below is what the beginning setup looks like.</h5>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">_config</span><span class="o">.</span><span class="n">yml</span>
+<span class="n">_includes</span>  <span class="sr">//</span> <span class="n">elements</span> <span class="n">like</span> <span class="n">the</span> <span class="n">header</span><span class="p">,</span> <span class="n">footer</span><span class="p">,</span> <span class="n">sidebars</span>
+<span class="n">_layouts</span>   <span class="sr">//</span> <span class="n">layouts</span> <span class="k">for</span> <span class="n">default</span> <span class="n">page</span><span class="p">,</span> <span class="n">posts</span> <span class="ow">and</span> <span class="n">other</span> <span class="n">pages</span>
+<span class="n">_posts</span>     <span class="sr">//</span> <span class="n">layout</span> <span class="k">for</span> <span class="n">posts</span>
+<span class="n">_sass</span>      <span class="sr">//</span> <span class="n">all</span> <span class="n">yer</span> <span class="n">sassy</span> <span class="n">sass</span> <span class="n">files</span>
+<span class="n">about</span><span class="o">.</span><span class="n">md</span>   <span class="sr">//</span> <span class="n">your</span> <span class="n">default</span> <span class="s2">&quot;about&quot;</span> <span class="n">page</span>
+<span class="n">css</span>        <span class="sr">//</span> <span class="n">good</span> <span class="n">old</span> <span class="n">final</span> <span class="no">CSS</span> <span class="n">file</span>
+<span class="n">feed</span><span class="o">.</span><span class="n">xml</span>   <span class="sr">//</span> <span class="n">your</span> <span class="n">automatically</span> <span class="n">generated</span> <span class="no">RSS</span> <span class="n">feed</span>
+<span class="n">index</span><span class="o">.</span><span class="n">html</span> <span class="sr">//</span> <span class="n">your</span> <span class="n">home</span> <span class="n">page</span></code></pre></div>
+
+<p>I ended up adding some extra files and directories on the root. I created a folders for assets and javascript, along with a 404 page (404.md), sitemap (sitemap.xml) and robots.txt. I’m a litte OCD about organization so I also created a “partials” directory inside the _sass folder.</p>
+
+<h5 id="step-6-other-stuff-thats-important-but-im-still-just-gonna-call-it-stuff">Step 6) Other stuff that’s important but I’m still just gonna call it stuff</h5>
+
+<p>You should also know a bit about the config file. You’ll need to edit that file to control things like the meta-description, the title of the site and plugins just to name a few. It’s the brain of your project so treat it with respect and edit carefully.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="sr">/* Site settings */</span>
+<span class="ss">title</span><span class="p">:</span> <span class="no">Title</span> <span class="n">of</span> <span class="n">my</span> <span class="n">site</span>
+
+<span class="sr">/* Your email address. I keep mine commented out and use a form instead. */</span>
+<span class="sr">//</span> <span class="ss">email</span><span class="p">:</span> <span class="n">myemail</span><span class="vi">@carolynvelez</span><span class="o">.</span><span class="n">com</span> 
+
+<span class="sr">/* Add your meta decription here. This is important because this  </span>
+<span class="sr">   is what will show up under your URL in Google search results. */</span>
+<span class="ss">description</span><span class="p">:</span> <span class="o">&gt;</span> <span class="c1"># this means to ignore newlines until &quot;baseurl:&quot;</span>
+	<span class="no">Description</span> <span class="n">text</span> <span class="n">here</span><span class="o">.</span>
+
+<span class="sr">/* Your domain */</span>
+<span class="ss">url</span><span class="p">:</span> <span class="s2">&quot;http://mydomain.com&quot;</span> <span class="c1"># the base hostname &amp; protocol for your site</span>
+
+<span class="sr">/* If you don&#39;t have an account right now don&#39;t worry about it.  </span>
+<span class="sr">   We&#39;ll come back to that in the next tutorial. */</span>
+<span class="ss">github_username</span><span class="p">:</span> <span class="n">myghusername</span>
+
+<span class="sr">/* Build settings */</span>
+<span class="ss">markdown</span><span class="p">:</span> <span class="n">kramdown</span> <span class="sr">/* &quot;kram&quot; is &quot;mark&quot; spelled backwards. get it?! :)  */</span></code></pre></div>
+
+<h5 id="step-7-build-it">Step 7) Build it!</h5>
+<p>You can get more information <a href="http://jekyllrb.com/docs/usage/" target="_blank">here</a> in case you want to configure the final output a bit differently. I just use the following to build my site to the default “_site” directory.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">jekyll</span> <span class="n">build</span></code></pre></div>
+
+<p>That folder contains the static files that will be uploaded to GitHub or my host’s server — wherever I choose to host my site.</p>
+
+<p>That’s a really quick way to get up and running. It’s just the very basics really. There’s a lot more you can do but I’m a believer in starting simple and finding out more as I go along. Below are two great references for when you get to that point or if you need to troubleshoot.</p>
+
+<p>References:<br />
+<a href="https://jekyllrb.com/" target="_blank">Jekyll: Simple, blog-aware static sites</a><br />
+<a href="http://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/" target="_blank">Smashing Magazine: Build A Blog With Jekyll And GitHub Pages</a></p>
+
+	</article>
+
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'carolyncodes';
+
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+			</div>
+		</div>
+
+		<footer class="u-full-width footer--main">
+
+	<div class="container">
+
+		<div class="four columns column--brain-icon">
+			<img src="/assets/icon-carolyncodes-reverse.svg" class="graphic-icon" alt="Brainz!">
+			<div class="row">
+				<h3><a href="/">carolyncodes.com</a></h3>
+				<p><a href="mailto:"></a></p>
+			</div>
+		</div>
+
+		<div class="eight columns">
+			<div class="row row--sm-icons">
+				<a href="https://www.linkedin.com/in/carolyngreenoughvelez" title="LinkedIn" target="_blank" class="linkedin"></a>
+				<!-- <a href="https://github.com/carolynvelez" title="GitHub" target="_blank" class="github"></a> -->
+				<a href="http://codepen.io/carolynvelez" title="CodePen" target="_blank" class="codepen"></a>
+ 			</div>
+			<div class="row">
+				<p class="text-small">CarolynCodes.com is created, written and maintained by Carolyn Velez. It is built using static generator <a href="https://jekyllrb.com/" title="Jekyll" target="_blank">Jekyll</a> and responsive boilerplate <a href="http://getskeleton.com/" title="Skeleton" target="_blank">Skeleton</a>. And of course HTML, CSS3 and <a href="http://sass-lang.com/" title="Sass" target="_blank">Sass</a>. Branding by <a href="http://joyrubincreative.com/" title="Joy Rubin Creative" target="_blank">Joy Rubin Creative</a>.</p>
+				<p class="text-small">&copy; Copyright 2015 Carolyn Velez.</p>
+			</div>
+		</div>
+
+	</div>
+
+</footer>
+
+
+	</body>
+
+	<!-- FB App -->
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '1544532899119284',
+				xfbml      : true,
+				version    : 'v2.4'
+			});
+		};
+
+		(function(d, s, id){
+			 var js, fjs = d.getElementsByTagName(s)[0];
+			 if (d.getElementById(id)) {return;}
+			 js = d.createElement(s); js.id = id;
+			 js.src = "//connect.facebook.net/en_US/sdk.js";
+			 fjs.parentNode.insertBefore(js, fjs);
+		 }(document, 'script', 'facebook-jssdk'));
+	</script>
+
+</html>

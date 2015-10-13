@@ -1,0 +1,30 @@
+<header class="u-full-width header--main u-cf">
+
+	<div class="container">
+
+		<a class="logo--header" href="{{ site.baseurl }}/">
+			<span></span>
+			<span></span>
+		</a>
+
+<!-- 
+		<ul id="switcher">
+			<li id="pinkBtn" class="active"></li>
+			<li id="goldBtn"></li>
+			<li id="blueBtn"></li>
+		</ul>
+ -->
+
+		<nav class="nav--main">
+			{% for page in site.pages %}
+				{% if page.title %}
+				<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+				{% endif %}
+			{% endfor %}
+		</nav>
+
+		<div class="border"></div>
+
+	</div>
+
+</header>

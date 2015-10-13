@@ -1,0 +1,191 @@
+// Color Switcher
+
+#switcher {
+	position: absolute;
+	top: -5px;
+	right: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+
+	li {
+		float: left;
+		width: 15px;
+		height: 15px;
+		margin: 0 5px;
+		padding: 0;
+		// border: solid 3px rgba($color-slate, .5);
+		cursor: pointer;
+	}
+	.active {
+		// border: solid 3px rgba($color-slate, 1);
+	}
+}
+#pinkBtn {
+	background: $color-pink;
+}
+#goldBtn {
+	background: $color-gold;
+}
+#blueBtn {
+	background: $color-blue;
+}
+
+@media (max-width: 1027px) {
+	#switcher {
+		display: none;
+	}
+}
+
+
+// Color Themes
+body {
+
+	&.pink {
+		a.logo--header {
+			span {
+				&:last-child {
+					background-position: 0 0;
+				}
+			}
+		}
+		a {
+			color: $color-pink;
+			&:hover {
+				color: $color-gold;
+				border-bottom-color: $color-gold;
+			}
+		}
+		a.page-link {
+			&:hover {
+				&:after {
+					@include hover-border($color-pink);
+				}
+			}
+		}
+		.row--sm-icons {
+			a.linkedin {
+				background-position: -5px -5px;
+				&:hover {
+					background-position: -5px -45px;
+				}
+			}
+			a.github {
+				background-position: -40px -5px;
+				&:hover {
+					background-position: -40px -45px;
+				}
+			}
+			a.codepen {
+				background-position: -75px -5px;
+				&:hover {
+					background-position: -75px -45px;
+				}
+			}
+		}
+		.post-list {
+			&--main, &--aside {
+				background-color: lighten($color-pink, 31%);
+			}
+		}
+	}
+
+	&.gold {
+		a.logo--header {
+			span {
+				&:last-child {
+					background-position: -170px 0;
+				}
+			}
+		}
+		a {
+			color: $color-gold;
+			&:hover {
+				color: $color-pink;
+				border-bottom-color: $color-pink;
+			}
+		}
+		a.page-link {
+			&:hover {
+				&:after {
+					@include hover-border($color-gold);
+				}
+			}
+		}
+		.row--sm-icons {
+			a.linkedin {
+				background-position: -115px -5px;
+				&:hover {
+					background-position: -115px -45px;
+				}
+			}
+			a.github {
+				background-position: -150px -5px;
+				&:hover {
+					background-position: -150px -45px;
+				}
+			}
+			a.codepen {
+				background-position: -185px -5px;
+				&:hover {
+					background-position: -185px -45px;
+				}
+			}
+		}
+		.post-list {
+			&--main, &--aside {
+				background-color: lighten($color-gold, 37%);
+			}
+		}
+	}
+
+	&.blue {
+		a.logo--header {
+			span {
+				&:last-child {
+					background-position: -340px 0;
+				}
+			}
+		}
+		a {
+			color: $color-blue;
+			&:hover {
+				color: $color-gold;
+				border-bottom-color: $color-gold;
+			}
+		}
+		a.page-link {
+			&:hover {
+				&:after {
+					@include hover-border($color-blue);
+				}
+			}
+		}
+		.row--sm-icons {
+			a.linkedin {
+				background-position: -225px -5px;
+				&:hover {
+					background-position: -225px -45px;
+				}
+			}
+			a.github {
+				background-position: -260px -5px;
+				&:hover {
+					background-position: -260px -45px;
+				}
+			}
+			a.codepen {
+				background-position: -295px -5px;
+				&:hover {
+					background-position: -295px -45px;
+				}
+			}
+		}
+		.post-list {
+			&--main, &--aside {
+				background-color: lighten($color-blue, 33%);
+			}
+		}
+	}
+}

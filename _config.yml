@@ -1,0 +1,22 @@
+# Site settings
+title: Carolyn Codes
+# email: carolyn.g.velez@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  I'm a presentation layer front-end developer with design background that hails 
+  from Seattle, Washington. I thrive on creating intuitive digital experiences 
+  and advocate strongly for the user. My experience includes working on large 
+  scale solutions clients like Allrecipes and the University of Washington as 
+  well as creating successful web presences for small businesses.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://carolyncodes.com" # the base hostname & protocol for your site
+# twitter_username: jekyllrb
+github_username: carolynvelez
+
+# FB Open Graph
+fb_admins:			http://facebook.com/carolyn.g.velez
+fb_appid:			1544532899119284
+avatar:				/avatar/assets/og-icon.jpg
+
+# Build settings
+markdown: kramdown
+gems: ["jekyll/minibundle"]

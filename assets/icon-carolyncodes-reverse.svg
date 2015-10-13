@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 170 140" enable-background="new 0 0 170 140" xml:space="preserve">
+
+<style type="text/css">
+	.brain-icon .slate 		{ fill: #31424c; }
+	.brain-icon .pink 		{ fill: #ff5776; }
+	.brain-icon .gold 		{ fill: #fcaf35; }
+	.brain-icon .blue 		{ fill: #6ad0df; }
+	.brain-icon .white 		{ fill: #ffffff; }
+	.brain-icon .brand 		{ fill: #fcaf35; }
+</style>
+
+<g class="brain-icon">
+	<rect class="slate" x="37" y="10" width="24" height="24"/>
+	<rect class="blue" x="61" y="10" width="24" height="24"/>
+	<rect class="pink" x="85" y="10" width="24" height="24"/>
+	<rect class="slate" x="109" y="10" width="24" height="24"/>
+	<rect class="slate" x="13" y="34" width="24" height="24"/>
+	<rect class="pink" x="37" y="34" width="24" height="24"/>
+	<rect class="gold" x="61" y="34" width="24" height="24"/>
+	<rect class="slate" x="85" y="34" width="24" height="24"/>
+	<rect class="blue" x="109" y="34" width="24" height="24"/>
+	<rect class="pink" x="133" y="34" width="24" height="24"/>
+	<rect class="gold" x="13" y="58" width="24" height="24"/>
+	<rect class="blue" x="37" y="58" width="24" height="24"/>
+	<rect class="slate" x="61" y="58" width="24" height="24"/>
+	<rect class="gold" x="85" y="58" width="24" height="24"/>
+	<rect class="slate" x="37" y="82" width="24" height="24"/>
+	<rect class="blue" x="61" y="82" width="24" height="24"/>
+	<rect class="pink" x="37" y="106" width="24" height="24"/>
+
+	<g>
+		<path class="white" d="M54.2,28.4l-11.5-5v-2.8l11.5-5v3.3l-8,3.1l8,3.2V28.4z"/>
+	</g>
+	<g>
+		<path class="white" d="M115.2,76.4v-3.2l8-3.2l-8-3.1v-3.2l11.5,5v2.7L115.2,76.4z"/>
+	</g>
+	<g>
+		<path class="white" d="M91.1,44.6v-3h11.7v3H91.1z M91.1,50.3v-3h11.7v3H91.1z"/>
+	</g>
+	<g>
+		<path class="white" d="M23.1,44v-3.8h3.8V44H23.1z M23.1,51.8V48h3.8v3.8H23.1z"/>
+	</g>
+	<g>
+		<path class="white" d="M117.3,25l-0.6-3.1V19h3.5v2.8l-0.5,3.1H117.3z M122.4,25l-0.6-3.1V19h3.5v2.8l-0.5,3.1H122.4z"/>
+	</g>
+	<g>
+		<path class="white" d="M45.3,97l-0.6-3.1V91h3.5v2.8L47.6,97H45.3z M50.4,97l-0.6-3.1V91h3.5v2.8L52.8,97H50.4z"/>
+	</g>
+	<g>
+		<path class="white" d="M69.3,78.8l4.2-17.3h3.2l-4.2,17.3H69.3z"/>
+	</g>
+</g>
+
+<g class="brain-icon">
+	<path class="white" d="M133,10v24h24v24h-24v24H85v24H61v24H37V82H13V34h24V10H133 M136,7h-3H37h-3v3v21H13h-3v3v48v3h3h21v45v3h3h24h3v-3v-21h21h3v-3V85h45h3v-3V61h21h3v-3V34v-3h-3h-21V10V7L136,7z"/>
+</g>
+
+</svg>

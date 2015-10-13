@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="brain-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 144 120" enable-background="new 0 0 144 120" xml:space="preserve">
+<style type="text/css">
+	#brain-icon .slate 		{ fill: #31424c; }
+	#brain-icon .pink 		{ fill: #ff5776; }
+	#brain-icon .gold 		{ fill: #fcaf35; }
+	#brain-icon .blue 		{ fill: #6ad0df; }
+	#brain-icon .white 		{ fill: #ffffff; }
+</style>
+<rect x="24" y="0" class="slate" width="24" height="24"/>
+<rect x="48" y="0" class="blue" width="24" height="24"/>
+<rect x="72" y="0" class="pink" width="24" height="24"/>
+<rect x="96" y="0" class="slate" width="24" height="24"/>
+<rect y="24" class="slate" width="24" height="24"/>
+<rect x="24" y="24" class="pink" width="24" height="24"/>
+<rect x="48" y="24" class="gold" width="24" height="24"/>
+<rect x="72" y="24" class="slate" width="24" height="24"/>
+<rect x="96" y="24" class="blue" width="24" height="24"/>
+<rect x="120" y="24" class="pink" width="24" height="24"/>
+<rect y="48" fill="#FCAF35" width="24" height="24"/>
+<rect x="24" y="48" class="blue" width="24" height="24"/>
+<rect x="48" y="48" class="slate" width="24" height="24"/>
+<rect x="72" y="48" class="gold" width="24" height="24"/>
+<rect x="96" y="48" class="slate" width="24" height="24"/>
+<rect x="24" y="72" class="slate" width="24" height="24"/>
+<rect x="48" y="72" class="blue" width="24" height="24"/>
+<rect x="24" y="96" class="pink" width="24" height="24"/>
+<g>
+	<g>
+		<path class="white" d="M41.2,18.4l-11.5-5v-2.8l11.5-5v3.3l-8,3.1l8,3.2V18.4z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path class="white" d="M102.2,66.4v-3.2l8-3.2l-8-3.1v-3.2l11.5,5v2.7L102.2,66.4z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path class="white" d="M78.1,34.6v-3h11.7v3H78.1z M78.1,40.3v-3h11.7v3H78.1z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path class="white" d="M10.1,34v-3.8h3.8V34H10.1z M10.1,41.8V38h3.8v3.8H10.1z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path class="white" d="M104.3,15l-0.6-3.1V9h3.5v2.8l-0.5,3.1H104.3z M109.4,15l-0.6-3.1V9h3.5v2.8l-0.5,3.1H109.4z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path class="white" d="M32.3,87l-0.6-3.1V81h3.5v2.8L34.6,87H32.3z M37.4,87l-0.6-3.1V81h3.5v2.8L39.8,87H37.4z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path class="white" d="M56.3,68.8l4.2-17.3h3.2l-4.2,17.3H56.3z"/>
+	</g>
+</g>
+</svg>
