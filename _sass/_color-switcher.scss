@@ -1,5 +1,4 @@
 // Color Switcher
-
 #switcher {
 	position: absolute;
 	top: -5px;
@@ -15,13 +14,12 @@
 		height: 15px;
 		margin: 0 5px;
 		padding: 0;
-		// border: solid 3px rgba($color-slate, .5);
 		cursor: pointer;
 	}
 	.active {
-		// border: solid 3px rgba($color-slate, 1);
 	}
 }
+
 #pinkBtn {
 	background: $color-pink;
 }
@@ -31,13 +29,6 @@
 #blueBtn {
 	background: $color-blue;
 }
-
-@media (max-width: 1027px) {
-	#switcher {
-		display: none;
-	}
-}
-
 
 // Color Themes
 body {
@@ -91,6 +82,7 @@ body {
 		}
 	}
 
+
 	&.gold {
 		a.logo--header {
 			span {
@@ -140,6 +132,7 @@ body {
 		}
 	}
 
+
 	&.blue {
 		a.logo--header {
 			span {
@@ -187,5 +180,41 @@ body {
 				background-color: lighten($color-blue, 33%);
 			}
 		}
+	}
+}
+
+@media (max-width: 1027px) {
+	#switcher {
+		display: none;
+	}
+
+	body {
+		&.gold {
+			a.logo--header {
+				span {
+					&:last-child {
+						background-position: 0 0 !important;
+					}
+				}
+			}
+		}
+		&.gold {
+			a.logo--header {
+				span {
+					&:last-child {
+						background-position: -130px 0 !important;
+					}
+				}
+			}
+		}
+		&.blue {
+			a.logo--header {
+				span {
+					&:last-child {
+						background-position: -260px 0 !important;
+					}
+				}
+			}
+		}		
 	}
 }
