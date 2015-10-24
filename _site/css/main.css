@@ -1146,6 +1146,7 @@ li {
   line-height: 30px;
   z-index: 100; }
   .nav--main a.page-link {
+    position: relative;
     font-family: "Lora", Georgia, "Times New Poman", serif;
     font-size: .75rem;
     text-transform: uppercase;
