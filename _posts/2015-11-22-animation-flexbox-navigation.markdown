@@ -10,7 +10,7 @@ I was inspired to create a kind of minimalist navigation using CSS3's Flexbox an
 <p data-height="300" data-theme-id="0" data-slug-hash="gayzej" data-default-tab="result" data-user="carolynvelez" class='codepen'>See the Pen <a href='http://codepen.io/carolynvelez/pen/gayzej/'>Flexbox & Animation Fun: Navigation</a> by Carolyn Velez (<a href='http://codepen.io/carolynvelez'>@carolynvelez</a>) on <a href='http://codepen.io'>CodePen</a>.</p><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 ##### Step 1
-I'm still getting the hang of making the most out of Flexbox. Hopefully it won't be much longer until it becomes standard for browsers since it makes handling responsive layouts so much easier to handle. Fewer hacks and media queries are needed to make the layout change as needed.
+I'm still getting the hang of making the most out of Flexbox. Hopefully it won't be much longer until it becomes standard for browsers since it makes handling responsive layouts so much easier to handle. Fewer hacks and media queries are needed to make the layout changes needed.
 
 I laid the nav out using a good old unordered list and giving that the "flex-container" class and giving the list-items the "flex-item" class. I also added span tags around the text because if I need to apply styles, then I only need I don't need a class since I'm targeting the span by nesting it inside the "flex-item" class.
 

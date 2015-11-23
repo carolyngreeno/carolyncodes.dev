@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="description" content="I was inspired to create a kind of minimalist navigation using CSS3’s Flexbox and animation properties. As a designer I like the trend of using a very lean m...">
+
+	<title>Minimal Navigation Solution with Flexbox and Animation</title>
+
+	<link rel="icon" type="image/png" href="/assets/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/assets/favicon-16x16.png" sizes="16x16">
+
+	<link rel="stylesheet" href="/css/main.css">
+
+	<link rel="canonical" href="http://carolyncodes.com/css/2015/11/22/animation-flexbox-navigation.html">
+	<link rel="alternate" type="application/rss+xml" title="Carolyn Codes" href="http://carolyncodes.com/feed.xml" />
+
+	<!-- FB Open Graph -->
+	<meta property="og:url" content="http://carolyncodes.com/css/2015/11/22/animation-flexbox-navigation.html">
+	<meta property="og:title" content="Minimal Navigation Solution with Flexbox and Animation">
+	<meta property="og:description" content="Front End Development Blog">
+	<meta property="og:image" content="http://carolyncodes.com/assets/og-icon.jpg">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:image:width" content="170">
+	<meta property="og:image:height" content="145">
+	<meta property="og:locale" content="en_US">
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-67856070-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+</head>
+
+	<body class="gold">
+
+		<header class="u-full-width header--main u-cf">
+
+	<div class="container">
+
+		<a class="logo--header" href="/">
+			<span></span>
+			<span></span>
+		</a>
+
+<!-- 
+		<ul id="switcher">
+			<li id="pinkBtn" class="active"></li>
+			<li id="goldBtn"></li>
+			<li id="blueBtn"></li>
+		</ul>
+ -->
+
+		<nav class="nav--main">
+			
+				
+			
+				
+				<a class="page-link" href="/contact-me/">Contact Me</a>
+				
+			
+				
+				<a class="page-link" href="/experience/">Experience</a>
+				
+			
+				
+			
+				
+			
+				
+			
+				
+				<a class="page-link" href="/skills/">Skills</a>
+				
+			
+		</nav>
+
+		<div class="border"></div>
+
+	</div>
+
+</header>
+
+
+		<div class="u-full-width u-full-width--main">
+			<div class="container content--main">
+				<div class="post">
+
+	<header class="post-header">
+		<h6 class="post-meta">Nov 22, 2015</h6>
+		<h1>Minimal Navigation Solution with Flexbox and Animation</h1>
+	</header>
+
+	<article class="twelve columns">
+		<p>I was inspired to create a kind of minimalist navigation using CSS3’s Flexbox and animation properties. As a designer I like the trend of using a very lean main navigation and directing users on how to find what they need in a more creative and perhaps intuitive way.</p>
+
+<p data-height="300" data-theme-id="0" data-slug-hash="gayzej" data-default-tab="result" data-user="carolynvelez" class="codepen">See the Pen <a href="http://codepen.io/carolynvelez/pen/gayzej/">Flexbox &amp; Animation Fun: Navigation</a> by Carolyn Velez (<a href="http://codepen.io/carolynvelez">@carolynvelez</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h5 id="step-1">Step 1</h5>
+<p>I’m still getting the hang of making the most out of Flexbox. Hopefully it won’t be much longer until it becomes standard for browsers since it makes handling responsive layouts so much easier to handle. Fewer hacks and media queries are needed to make the layout changes needed.</p>
+
+<p>I laid the nav out using a good old unordered list and giving that the “flex-container” class and giving the list-items the “flex-item” class. I also added span tags around the text because if I need to apply styles, then I only need I don’t need a class since I’m targeting the span by nesting it inside the “flex-item” class.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="n">ul</span> <span class="n">class</span><span class="o">=</span><span class="s1">&#39;flex-container&#39;</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="n">li</span> <span class="n">class</span><span class="o">=</span><span class="s1">&#39;flex-item&#39;</span><span class="o">&gt;</span>
+		<span class="o">&lt;</span><span class="n">span</span><span class="o">&gt;</span><span class="no">HTML</span><span class="o">&lt;</span><span class="sr">/span&gt;</span>
+<span class="sr">	&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="n">li</span> <span class="n">class</span><span class="o">=</span><span class="s1">&#39;flex-item&#39;</span><span class="o">&gt;</span>
+		<span class="o">&lt;</span><span class="n">span</span><span class="o">&gt;</span><span class="no">CSS</span><span class="o">&lt;</span><span class="sr">/span&gt;</span>
+<span class="sr">	&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="n">li</span> <span class="n">class</span><span class="o">=</span><span class="s1">&#39;flex-item&#39;</span><span class="o">&gt;</span>
+		<span class="o">&lt;</span><span class="n">span</span><span class="o">&gt;</span><span class="no">JS</span><span class="o">&lt;</span><span class="sr">/span&gt;</span>
+<span class="sr">	&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="sr">/ul&gt;</span></code></pre></div>
+
+<h5 id="step-2">Step 2</h5>
+<p>One thing that’s taken me a little getting used to with Flexbox is that I need to remember to declare more positioning properties in the parent element. The parent element will always need <strong>flex: display;</strong> and most things after that are optional. It just depends on what you’re trying to do. In this case I want three columns (please note I’m using that term loosely) in a <strong>row</strong> and I want them positioned at the bottom (<strong>flex-end</strong>) of the parent container.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">.</span><span class="n">flex</span><span class="o">-</span><span class="n">container</span> <span class="p">{</span>
+	<span class="nb">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>			<span class="sr">/* declare the flexbox property as the display */</span>
+	<span class="n">flex</span><span class="o">-</span><span class="ss">direction</span><span class="p">:</span> <span class="n">row</span><span class="p">;</span>		<span class="sr">/* line up all items in within the container */</span>
+	<span class="n">align</span><span class="o">-</span><span class="ss">items</span><span class="p">:</span> <span class="n">flex</span><span class="o">-</span><span class="k">end</span><span class="p">;</span>		<span class="sr">/* line up all items at the bottom of the container */</span>
+	<span class="o">.</span><span class="n">.</span>
+<span class="p">}</span></code></pre></div>
+
+<h5 id="step-3">Step 3</h5>
+<p>The columns are going to be children of the parent flexbox container but they are also going to be parent containers to the text so I’m going to assign the <strong>display: flex;</strong> again. Now I didn’t actually need to declare any CSS for the span elements containing my text because all the positioning was taken care of the parent element. Cool huh?</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">.</span><span class="n">flex</span><span class="o">-</span><span class="n">item</span> <span class="p">{</span>
+	<span class="nb">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+	<span class="n">justify</span><span class="o">-</span><span class="ss">content</span><span class="p">:</span> <span class="n">flex</span><span class="o">-</span><span class="k">end</span><span class="p">;</span>
+	<span class="n">align</span><span class="o">-</span><span class="ss">items</span><span class="p">:</span> <span class="n">flex</span><span class="o">-</span><span class="k">end</span><span class="p">;</span>		<span class="sr">/* align the child elements to the right */</span>
+	<span class="o">.</span><span class="n">.</span>
+<span class="p">}</span></code></pre></div>
+
+<h5 id="step-4">Step 4</h5>
+<p>I wanted to add an animation to the columns to make them a little more interesting. Instead of just expanding to 100% to fill the vertical space, I used <strong>@keyframes</strong> to vary the way it expanded a bit.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">.</span><span class="n">slidein</span> <span class="p">{</span>
+	<span class="n">animation</span><span class="o">-</span><span class="nb">name</span><span class="p">:</span> <span class="n">slidein</span><span class="p">;</span>
+	<span class="n">animation</span><span class="o">-</span><span class="ss">duration</span><span class="p">:</span> <span class="mi">700</span><span class="n">ms</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="vi">@keyframes</span> <span class="n">slidein</span> <span class="p">{</span>
+	<span class="mi">10</span><span class="o">%</span>  <span class="p">{</span> <span class="ss">height</span><span class="p">:</span> <span class="mi">80</span><span class="sx">%; }</span>
+<span class="sx">	25%  { height: 50%;</span> <span class="p">}</span>
+	<span class="mi">40</span><span class="o">%</span>  <span class="p">{</span> <span class="ss">height</span><span class="p">:</span> <span class="mi">90</span><span class="sx">%; }</span>
+<span class="sx">	55%  { height: 80%;</span> <span class="p">}</span>
+	<span class="mi">100</span><span class="o">%</span> <span class="p">{</span> <span class="ss">height</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<h5 id="step-5">Step 5</h5>
+<p>The animation applies to hover and focus since I want it to work on mobile devices as well as desktops. I also wanted to add a transition to mouseout but but not the same one. It felt like too much. So intead added the following property to the <em>.flex-item</em> class. By using <strong>all</strong> for the property I wanted to transform, it applied to everything that changed between <strong>.flex-item</strong> and <strong>.flex-item:hover, .flex-item:focus</strong>.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">transition</span><span class="p">:</span> <span class="n">all</span> <span class="mi">300</span><span class="n">ms</span><span class="p">;</span></code></pre></div>
+
+<p>I hope you find this entertaining or helpful or both.</p>
+
+<p>References:<br />
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" target="_blank">MDN: Using CSS3 Animations</a><br />
+<a href="http://marketblog.envato.com/learn-something-new/css3-flexbox/" target="_blank">Understanding CSS3 Flexbox for Responsive Design</a></p>
+
+	</article>
+
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'carolyncodes';
+
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+			</div>
+		</div>
+
+		<footer class="u-full-width footer--main">
+
+	<div class="container">
+
+		<div class="four columns column--brain-icon">
+			<img src="/assets/icon-carolyncodes-reverse.svg" class="graphic-icon" alt="Brainz!">
+			<div class="row">
+				<h3><a href="/">carolyncodes.com</a></h3>
+				<p><a href="mailto:"></a></p>
+			</div>
+		</div>
+
+		<div class="eight columns">
+			<div class="row row--sm-icons">
+				<a href="https://www.linkedin.com/in/carolyngreenoughvelez" title="LinkedIn" target="_blank" class="linkedin"></a>
+				<!-- <a href="https://github.com/carolynvelez" title="GitHub" target="_blank" class="github"></a> -->
+				<a href="http://codepen.io/carolynvelez" title="CodePen" target="_blank" class="codepen"></a>
+ 			</div>
+			<div class="row">
+				<p class="text-small">CarolynCodes.com is created, written and maintained by Carolyn Velez. It is built using static generator <a href="https://jekyllrb.com/" title="Jekyll" target="_blank">Jekyll</a> and responsive boilerplate <a href="http://getskeleton.com/" title="Skeleton" target="_blank">Skeleton</a>. And of course HTML, CSS3 and <a href="http://sass-lang.com/" title="Sass" target="_blank">Sass</a>. Branding by <a href="http://joyrubincreative.com/" title="Joy Rubin Creative" target="_blank">Joy Rubin Creative</a>.</p>
+				<p class="text-small">&copy; Copyright 2015 Carolyn Velez.</p>
+			</div>
+		</div>
+
+	</div>
+
+</footer>
+
+
+	</body>
+
+	<!-- FB App -->
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '1544532899119284',
+				xfbml      : true,
+				version    : 'v2.4'
+			});
+		};
+
+		(function(d, s, id){
+			 var js, fjs = d.getElementsByTagName(s)[0];
+			 if (d.getElementById(id)) {return;}
+			 js = d.createElement(s); js.id = id;
+			 js.src = "//connect.facebook.net/en_US/sdk.js";
+			 fjs.parentNode.insertBefore(js, fjs);
+		 }(document, 'script', 'facebook-jssdk'));
+	</script>
+
+</html>
