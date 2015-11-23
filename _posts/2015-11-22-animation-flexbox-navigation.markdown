@@ -71,7 +71,7 @@ I wanted to add an animation to the columns to make them a little more interesti
 {% endhighlight %}
 
 ##### Step 5
-The animation applies to hover and focus since I want it to work on mobile devices as well as desktops. I also wanted to add a transition to mouseout but but not the same one. It felt like too much. So intead added the following property to the *.flex-item* class. By using **all** for the property I wanted to transform, it applied to everything that changed between **.flex-item** and **.flex-item:hover, .flex-item:focus**.
+I also wanted to add a transition to mouseout but but not the same one. It felt like too much. So intead added the following property to the *.flex-item* class. By using **all** for the property I wanted to transform, it applied to everything that changed between **.flex-item** and **.flex-item:hover, .flex-item:focus**.
 
 {% highlight ruby %}
 	transition: all 300ms;

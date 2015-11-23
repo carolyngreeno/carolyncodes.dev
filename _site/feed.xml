@@ -6,8 +6,8 @@
 </description>
 		<link>http://carolyncodes.com/</link>
 		<atom:link href="http://carolyncodes.com/feed.xml" rel="self" type="application/rss+xml"/>
-		<pubDate>Sun, 22 Nov 2015 19:07:38 -0800</pubDate>
-		<lastBuildDate>Sun, 22 Nov 2015 19:07:38 -0800</lastBuildDate>
+		<pubDate>Sun, 22 Nov 2015 19:55:01 -0800</pubDate>
+		<lastBuildDate>Sun, 22 Nov 2015 19:55:01 -0800</lastBuildDate>
 		<generator>Jekyll v2.5.3</generator>
 		
 			<item>
@@ -71,7 +71,7 @@
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h5 id=&quot;step-5&quot;&gt;Step 5&lt;/h5&gt;
-&lt;p&gt;The animation applies to hover and focus since I want it to work on mobile devices as well as desktops. I also wanted to add a transition to mouseout but but not the same one. It felt like too much. So intead added the following property to the &lt;em&gt;.flex-item&lt;/em&gt; class. By using &lt;strong&gt;all&lt;/strong&gt; for the property I wanted to transform, it applied to everything that changed between &lt;strong&gt;.flex-item&lt;/strong&gt; and &lt;strong&gt;.flex-item:hover, .flex-item:focus&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I also wanted to add a transition to mouseout but but not the same one. It felt like too much. So intead added the following property to the &lt;em&gt;.flex-item&lt;/em&gt; class. By using &lt;strong&gt;all&lt;/strong&gt; for the property I wanted to transform, it applied to everything that changed between &lt;strong&gt;.flex-item&lt;/strong&gt; and &lt;strong&gt;.flex-item:hover, .flex-item:focus&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;ss&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;all&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
