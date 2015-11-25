@@ -15,16 +15,8 @@
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
-	<!-- FB Open Graph -->
-	<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-	<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-	<meta property="og:description" content="Front End Development Blog">
-	<meta property="og:image" content="http://carolyncodes.com/assets/og-icon.jpg">
-	<meta property="og:image:type" content="image/jpeg">
-	<meta property="og:image:width" content="170">
-	<meta property="og:image:height" content="145">
-	<meta property="og:locale" content="en_US">
-
+	{% include open-graph.html %}
+	
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
