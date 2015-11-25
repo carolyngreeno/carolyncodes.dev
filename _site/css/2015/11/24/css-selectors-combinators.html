@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="description" content="There are a lot of times when we don’t have control over the markup. Here’s another way to have more control over targeting your content using selectors.">
+
+	<title>CSS Selectors: Combinators</title>
+
+	<link rel="icon" type="image/png" href="/assets/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/assets/favicon-16x16.png" sizes="16x16">
+
+	<link rel="stylesheet" href="/css/main.css">
+
+	<link rel="canonical" href="http://carolyncodes.com/css/2015/11/24/css-selectors-combinators.html">
+	<link rel="alternate" type="application/rss+xml" title="Carolyn Codes" href="http://carolyncodes.com/feed.xml" />
+
+	<!-- FB Open Graph -->
+	<meta property="og:url" content="http://carolyncodes.com/css/2015/11/24/css-selectors-combinators.html">
+	<meta property="og:title" content="CSS Selectors: Combinators">
+	<meta property="og:description" content="Front End Development Blog">
+	<meta property="og:image" content="http://carolyncodes.com/assets/og-icon.jpg">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:image:width" content="170">
+	<meta property="og:image:height" content="145">
+	<meta property="og:locale" content="en_US">
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-67856070-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+</head>
+
+	<body class="gold">
+
+		<header class="u-full-width header--main u-cf">
+
+	<div class="container">
+
+		<a class="logo--header" href="/">
+			<span></span>
+			<span></span>
+		</a>
+
+<!-- 
+		<ul id="switcher">
+			<li id="pinkBtn" class="active"></li>
+			<li id="goldBtn"></li>
+			<li id="blueBtn"></li>
+		</ul>
+ -->
+
+		<nav class="nav--main">
+			
+				
+			
+				
+				<a class="page-link" href="/contact-me/">Contact Me</a>
+				
+			
+				
+				<a class="page-link" href="/experience/">Experience</a>
+				
+			
+				
+			
+				
+			
+				
+			
+				
+				<a class="page-link" href="/skills/">Skills</a>
+				
+			
+		</nav>
+
+		<div class="border"></div>
+
+	</div>
+
+</header>
+
+
+		<div class="u-full-width u-full-width--main">
+			<div class="container content--main">
+				<div class="post">
+
+	<header class="post-header">
+		<h6 class="post-meta">Nov 24, 2015</h6>
+		<h1>CSS Selectors: Combinators</h1>
+	</header>
+
+	<article class="twelve columns">
+		<p>There are a lot of times when we don’t have control over the markup. Here’s another way to have more control over targeting your content using selectors.</p>
+
+<h4 id="adjacent-sibling-selectors">Adjacent Sibling Selectors</h4>
+<p><em>“This is referred to as an adjacent selector or next-sibling selector. It will select only the specified element that immediately follows the former specified element.” ~ <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_selectors" target="_blank">MDN</a></em></p>
+
+<p data-height="200" data-theme-id="0" data-slug-hash="MadZEd" data-default-tab="result" data-user="carolynvelez" class="codepen">See the Pen <a href="http://codepen.io/carolynvelez/pen/MadZEd/">CSS Selectors: Combinators: Adjacent Sibling Selector</a> by Carolyn Velez (<a href="http://codepen.io/carolynvelez">@carolynvelez</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h6 id="how-i-might-use-it">How I Might Use It</h6>
+<p>I want to reduce the amount of space between my &lt;h2&gt; title and my &lt;h3&gt; subtitle. So instead of giving the h3 a class, I’ll target that specific instance of &lt;h3&gt; by writing h2 + h3 {margin-top: 0;}. That way it would <em>only</em> apply to that one instance of h3. No more, no less.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span>
+	<span class="n">h2</span> <span class="o">+</span> <span class="n">h3</span> <span class="p">{</span> <span class="n">margin</span><span class="o">-</span><span class="ss">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;}</span>
+<span class="o">&lt;</span><span class="sr">/style&gt;</span>
+
+<span class="sr">&lt;h2&gt;Title&lt;/</span><span class="n">h2</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">h3</span><span class="o">&gt;</span><span class="no">Subtitle</span><span class="o">&lt;</span><span class="sr">/h3&gt;</span></code></pre></div>
+
+<h4 id="general-sibling-selectors">General Sibling Selectors</h4>
+<p><em>“The ~ combinator separates two selectors and matches the second element only if it is preceded by the first, and both share a common parent.” ~ <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_selectors" target="_blank">MDN</a></em></p>
+
+<p data-height="200" data-theme-id="0" data-slug-hash="NGVewL" data-default-tab="result" data-user="carolynvelez" class="codepen">See the Pen <a href="http://codepen.io/carolynvelez/pen/NGVewL/">CSS Selectors: Combinators: Child Selectors</a> by Carolyn Velez (<a href="http://codepen.io/carolynvelez">@carolynvelez</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h6 id="how-i-might-use-it-1">How I Might Use It</h6>
+<p>I want the first paragraph of a post to have slightly larger text than the rest of the copy. I’ll give the first selector a class because I don’t want the style to affect every paragraph on the page — just the posts. Then I use the GSS to specify <em>all</em> the paragraph tags that follow. Not just the first one like the ASS (these are long names what do you want from me?).</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span>
+	<span class="nb">p</span><span class="o">.</span><span class="n">post</span> <span class="p">{</span><span class="n">font</span><span class="o">-</span><span class="ss">size</span><span class="p">:</span> <span class="mi">20</span><span class="n">px</span><span class="p">;}</span>
+	<span class="nb">p</span><span class="o">.</span><span class="n">post</span> <span class="o">~</span> <span class="nb">p</span> <span class="p">{</span><span class="n">font</span><span class="o">-</span><span class="ss">size</span><span class="p">:</span> <span class="mi">16</span><span class="n">px</span><span class="p">;}</span>
+<span class="o">&lt;</span><span class="sr">/style&gt;</span>
+
+<span class="sr">&lt;p class=&quot;post&quot;&gt;Paragraph one.&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="no">Paragraph</span> <span class="n">two</span><span class="o">.</span><span class="n">&lt;</span><span class="sr">/p&gt;</span>
+<span class="sr">&lt;p&gt;Paragraph three.&lt;/</span><span class="nb">p</span><span class="o">&gt;</span></code></pre></div>
+
+<h4 id="child-selectors">Child Selectors</h4>
+<p><em>“The &gt; combinator separates two selectors and matches only those elements matched by the second selector that are direct children of elements matched by the first. By contrast, when two selectors are combined with the descendant selector, the combined selector expression matches those elements matched by the second selector for which there exists an ancestor element matched by the first selector, regardless of the number of “hops” up the DOM.” ~ <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Child_selectors" target="_blank">MDN</a></em></p>
+
+<p data-height="250" data-theme-id="0" data-slug-hash="bVyOYj" data-default-tab="result" data-user="carolynvelez" class="codepen">See the Pen <a href="http://codepen.io/carolynvelez/pen/bVyOYj/">CSS Selectors: Combinators: Child Selector</a> by Carolyn Velez (<a href="http://codepen.io/carolynvelez">@carolynvelez</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h6 id="how-i-might-use-it-2">How I Might Use It</h6>
+<p>Navigation is classic example of good way to use a child selector. It’s pretty typical to use nested list items in navigation. So I would declare one set of properties as a default for all the nav items by using ul li and targeting the subnav items by using the CS (&gt;).</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span>
+	<span class="n">ul</span> <span class="n">li</span> <span class="p">{</span><span class="n">font</span><span class="o">-</span><span class="ss">size</span><span class="p">:</span> <span class="mi">16</span><span class="n">px</span><span class="p">;}</span>
+	<span class="n">ul</span> <span class="o">&gt;</span> <span class="n">li</span> <span class="p">{</span><span class="n">font</span><span class="o">-</span><span class="ss">size</span><span class="p">:</span> <span class="mi">20</span><span class="n">px</span><span class="p">;}</span>
+<span class="o">&lt;</span><span class="sr">/style&gt;</span>
+
+<span class="sr">&lt;ul&gt;</span>
+<span class="sr">	&lt;li&gt;Main Nav</span>
+<span class="sr">		&lt;ol&gt;</span>
+<span class="sr">			&lt;li&gt;Sub Nav&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+			<span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span><span class="no">Sub</span> <span class="no">Nav</span><span class="o">&lt;</span><span class="sr">/li&gt;</span>
+<span class="sr">		&lt;/o</span><span class="n">l</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="sr">/li&gt;</span>
+<span class="sr">&lt;/u</span><span class="n">l</span><span class="o">&gt;</span></code></pre></div>
+
+<h4 id="descendant-selectors">Descendant Selectors</h4>
+<p>The last one is the descendant selector and I bet you see that one all the time. If you do and always wondered what to call it, now you know. It’s really just an empty space. As in the first part of the code I wrote above. That means that any list-items following an unordered list tag will be targeted unless you give the &lt;ul&gt; a class. I recommend doing that since you’re likely to have lots of those in your markup and you don’t want to have to play CSS whack-a-mole by targeting each instance.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span>
+	<span class="n">ul</span> <span class="n">li</span> <span class="p">{</span><span class="n">font</span><span class="o">-</span><span class="ss">size</span><span class="p">:</span> <span class="mi">16</span><span class="n">px</span><span class="p">;}</span>
+	<span class="o">.</span><span class="n">.</span>
+<span class="o">&lt;</span><span class="sr">/style&gt;</span>
+
+<span class="sr">&lt;ul&gt;</span>
+<span class="sr">	&lt;li&gt;Main Nav</span>
+<span class="sr">		&lt;ol&gt;</span>
+<span class="sr">			&lt;li&gt;Sub Nav&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+			<span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span><span class="no">Sub</span> <span class="no">Nav</span><span class="o">&lt;</span><span class="sr">/li&gt;</span>
+<span class="sr">		&lt;/o</span><span class="n">l</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="sr">/li&gt;</span>
+<span class="sr">&lt;/u</span><span class="n">l</span><span class="o">&gt;</span></code></pre></div>
+
+<p>Have fun selecting stuff!</p>
+
+	</article>
+
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+		/* * * CONFIGURATION VARIABLES * * */
+		var disqus_shortname = 'carolyncodes';
+
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+			</div>
+		</div>
+
+		<footer class="u-full-width footer--main">
+
+	<div class="container">
+
+		<div class="four columns column--brain-icon">
+			<img src="/assets/icon-carolyncodes-reverse.svg" class="graphic-icon" alt="Brainz!">
+			<div class="row">
+				<h3><a href="/">carolyncodes.com</a></h3>
+				<p><a href="mailto:"></a></p>
+			</div>
+		</div>
+
+		<div class="eight columns">
+			<div class="row row--sm-icons">
+				<a href="https://www.linkedin.com/in/carolyngreenoughvelez" title="LinkedIn" target="_blank" class="linkedin"></a>
+				<!-- <a href="https://github.com/carolynvelez" title="GitHub" target="_blank" class="github"></a> -->
+				<a href="http://codepen.io/carolynvelez" title="CodePen" target="_blank" class="codepen"></a>
+ 			</div>
+			<div class="row">
+				<p class="text-small">CarolynCodes.com is created, written and maintained by Carolyn Velez. It is built using static generator <a href="https://jekyllrb.com/" title="Jekyll" target="_blank">Jekyll</a> and responsive boilerplate <a href="http://getskeleton.com/" title="Skeleton" target="_blank">Skeleton</a>. And of course HTML, CSS3 and <a href="http://sass-lang.com/" title="Sass" target="_blank">Sass</a>. Branding by <a href="http://joyrubincreative.com/" title="Joy Rubin Creative" target="_blank">Joy Rubin Creative</a>.</p>
+				<p class="text-small">&copy; Copyright 2015 Carolyn Velez.</p>
+			</div>
+		</div>
+
+	</div>
+
+</footer>
+
+
+	</body>
+
+	<!-- FB App -->
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '1544532899119284',
+				xfbml      : true,
+				version    : 'v2.4'
+			});
+		};
+
+		(function(d, s, id){
+			 var js, fjs = d.getElementsByTagName(s)[0];
+			 if (d.getElementById(id)) {return;}
+			 js = d.createElement(s); js.id = id;
+			 js.src = "//connect.facebook.net/en_US/sdk.js";
+			 fjs.parentNode.insertBefore(js, fjs);
+		 }(document, 'script', 'facebook-jssdk'));
+	</script>
+
+</html>

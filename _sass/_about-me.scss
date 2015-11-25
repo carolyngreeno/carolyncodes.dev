@@ -4,18 +4,25 @@
 
 	h6 {
 		margin-top: 2rem;
+		font-size: .875em;
 
 		&:nth-child(1) {
 			margin-top: 0 !important;
 		}
 	}
 
-	h2 {
+	h3 {
+		font-family: $font-family-sansserif;
+		font-weight: $font-weight-light;
 		// margin-bottom: .125em;
 	}
 
 	h4 {
-		// margin-bottom: .125em;
+		font-size: 1.125em;
+		font-weight: $font-weight-light;
+		margin-top: 0;
+		margin-bottom: .5em;
+		letter-spacing: 0;
 	}
 }
 

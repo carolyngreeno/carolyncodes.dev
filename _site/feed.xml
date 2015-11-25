@@ -6,9 +6,98 @@
 </description>
 		<link>http://carolyncodes.com/</link>
 		<atom:link href="http://carolyncodes.com/feed.xml" rel="self" type="application/rss+xml"/>
-		<pubDate>Sun, 22 Nov 2015 19:55:01 -0800</pubDate>
-		<lastBuildDate>Sun, 22 Nov 2015 19:55:01 -0800</lastBuildDate>
+		<pubDate>Tue, 24 Nov 2015 20:34:57 -0800</pubDate>
+		<lastBuildDate>Tue, 24 Nov 2015 20:34:57 -0800</lastBuildDate>
 		<generator>Jekyll v2.5.3</generator>
+		
+			<item>
+				<title>CSS Selectors: Combinators</title>
+				<description>&lt;p&gt;There are a lot of times when we don’t have control over the markup. Here’s another way to have more control over targeting your content using selectors.&lt;/p&gt;
+
+&lt;h4 id=&quot;adjacent-sibling-selectors&quot;&gt;Adjacent Sibling Selectors&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;“This is referred to as an adjacent selector or next-sibling selector. It will select only the specified element that immediately follows the former specified element.” ~ &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_selectors&quot; target=&quot;_blank&quot;&gt;MDN&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p data-height=&quot;200&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;MadZEd&quot; data-default-tab=&quot;result&quot; data-user=&quot;carolynvelez&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/carolynvelez/pen/MadZEd/&quot;&gt;CSS Selectors: Combinators: Adjacent Sibling Selector&lt;/a&gt; by Carolyn Velez (&lt;a href=&quot;http://codepen.io/carolynvelez&quot;&gt;@carolynvelez&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;//assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;h6 id=&quot;how-i-might-use-it&quot;&gt;How I Might Use It&lt;/h6&gt;
+&lt;p&gt;I want to reduce the amount of space between my &amp;lt;h2&amp;gt; title and my &amp;lt;h3&amp;gt; subtitle. So instead of giving the h3 a class, I’ll target that specific instance of &amp;lt;h3&amp;gt; by writing h2 + h3 {margin-top: 0;}. That way it would &lt;em&gt;only&lt;/em&gt; apply to that one instance of h3. No more, no less.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;h2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;h3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/style&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;sr&quot;&gt;&amp;lt;h2&amp;gt;Title&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Subtitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/h3&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;general-sibling-selectors&quot;&gt;General Sibling Selectors&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;“The ~ combinator separates two selectors and matches the second element only if it is preceded by the first, and both share a common parent.” ~ &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_selectors&quot; target=&quot;_blank&quot;&gt;MDN&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p data-height=&quot;200&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;NGVewL&quot; data-default-tab=&quot;result&quot; data-user=&quot;carolynvelez&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/carolynvelez/pen/NGVewL/&quot;&gt;CSS Selectors: Combinators: Child Selectors&lt;/a&gt; by Carolyn Velez (&lt;a href=&quot;http://codepen.io/carolynvelez&quot;&gt;@carolynvelez&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;//assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;h6 id=&quot;how-i-might-use-it-1&quot;&gt;How I Might Use It&lt;/h6&gt;
+&lt;p&gt;I want the first paragraph of a post to have slightly larger text than the rest of the copy. I’ll give the first selector a class because I don’t want the style to affect every paragraph on the page — just the posts. Then I use the GSS to specify &lt;em&gt;all&lt;/em&gt; the paragraph tags that follow. Not just the first one like the ASS (these are long names what do you want from me?).&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;font&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+	&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;font&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/style&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;sr&quot;&gt;&amp;lt;p class=&amp;quot;post&amp;quot;&amp;gt;Paragraph one.&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Paragraph&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;two&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;&amp;lt;p&amp;gt;Paragraph three.&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;child-selectors&quot;&gt;Child Selectors&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;“The &amp;gt; combinator separates two selectors and matches only those elements matched by the second selector that are direct children of elements matched by the first. By contrast, when two selectors are combined with the descendant selector, the combined selector expression matches those elements matched by the second selector for which there exists an ancestor element matched by the first selector, regardless of the number of “hops” up the DOM.” ~ &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/Child_selectors&quot; target=&quot;_blank&quot;&gt;MDN&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p data-height=&quot;250&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;bVyOYj&quot; data-default-tab=&quot;result&quot; data-user=&quot;carolynvelez&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/carolynvelez/pen/bVyOYj/&quot;&gt;CSS Selectors: Combinators: Child Selector&lt;/a&gt; by Carolyn Velez (&lt;a href=&quot;http://codepen.io/carolynvelez&quot;&gt;@carolynvelez&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;//assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;h6 id=&quot;how-i-might-use-it-2&quot;&gt;How I Might Use It&lt;/h6&gt;
+&lt;p&gt;Navigation is classic example of good way to use a child selector. It’s pretty typical to use nested list items in navigation. So I would declare one set of properties as a default for all the nav items by using ul li and targeting the subnav items by using the CS (&amp;gt;).&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;li&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;font&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;li&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;font&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/style&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;sr&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;	&amp;lt;li&amp;gt;Main Nav&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;		&amp;lt;ol&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;			&amp;lt;li&amp;gt;Sub Nav&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+			&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Sub&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Nav&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/li&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;		&amp;lt;/o&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/li&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;&amp;lt;/u&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;descendant-selectors&quot;&gt;Descendant Selectors&lt;/h4&gt;
+&lt;p&gt;The last one is the descendant selector and I bet you see that one all the time. If you do and always wondered what to call it, now you know. It’s really just an empty space. As in the first part of the code I wrote above. That means that any list-items following an unordered list tag will be targeted unless you give the &amp;lt;ul&amp;gt; a class. I recommend doing that since you’re likely to have lots of those in your markup and you don’t want to have to play CSS whack-a-mole by targeting each instance.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;li&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;font&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/style&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;sr&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;	&amp;lt;li&amp;gt;Main Nav&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;		&amp;lt;ol&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;			&amp;lt;li&amp;gt;Sub Nav&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+			&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Sub&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Nav&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/li&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;		&amp;lt;/o&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/li&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;&amp;lt;/u&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Have fun selecting stuff!&lt;/p&gt;
+</description>
+				<pubDate>Tue, 24 Nov 2015 08:00:00 -0800</pubDate>
+				<link>http://carolyncodes.com/css/2015/11/24/css-selectors-combinators.html</link>
+				<guid isPermaLink="true">http://carolyncodes.com/css/2015/11/24/css-selectors-combinators.html</guid>
+				
+				
+				<category>css</category>
+				
+			</item>
 		
 			<item>
 				<title>Minimal Navigation Solution with Flexbox and Animation</title>
@@ -792,64 +881,6 @@ brain in gear I wasn’t going to be as effective. Hence this blog.&lt;/p&gt;
 				<pubDate>Sun, 20 Sep 2015 08:00:00 -0700</pubDate>
 				<link>http://carolyncodes.com/css3-animations/2015/09/20/css3-goat-animation.html</link>
 				<guid isPermaLink="true">http://carolyncodes.com/css3-animations/2015/09/20/css3-goat-animation.html</guid>
-				
-				
-				<category>css3-animations</category>
-				
-			</item>
-		
-			<item>
-				<title>Super Sassy Keyframes</title>
-				<description>&lt;p&gt;This is a super sassy first attempt at working with CSS3 animations. I wanted to get an idea of how to work with the keyframes especially so I created this basic implementation.&lt;/p&gt;
-
-&lt;p data-height=&quot;400&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;epzNzx&quot; data-default-tab=&quot;result&quot; data-user=&quot;carolynvelez&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/carolynvelez/pen/epzNzx/&quot;&gt;Sassy Keyframes&lt;/a&gt; by Carolyn Velez (&lt;a href=&quot;http://codepen.io/carolynvelez&quot;&gt;@carolynvelez&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
-&lt;script async=&quot;&quot; src=&quot;//assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;Started with the markup, I created a container with overflow: hidden so I could give the blocks a negative margin and they would appear to move into the viewable area from off the screen.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;container-box&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;block one--one icons&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/span&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;sr&quot;&gt;	&amp;lt;span class=&amp;quot;block one--two&amp;quot;&amp;gt;&amp;lt;/s&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pan&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;block one--three&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/span&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;sr&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;I wanted to move each block in the brain icon independently so I assigned a separate class for each block. Here’s an example of the keyframe declaration for the first block. I simply wanted the block to start at one point (0%) and end at another (100%).&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;vi&quot;&gt;@keyframes&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;animOneOne&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;I had to search a little to figure out how to get the block to stay in the same place that the animation ended. The default is for the positioning to reset to the blocks original location. The answer was to use the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode&quot; target=&quot;_blank&quot;&gt;animation-fill-mode&lt;/a&gt; property and give it “forwards” value. That allows it to retain the positioning the animation ended on.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;one&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;&amp;amp;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;one&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;ss&quot;&gt;animation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;animOneOne&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;forwards&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Then I used that animation in my class for “block one–one”. I only want the animation to run once so in the shortcut I included “1” to indicate that I only wanted one iteration and I used 1s as the length of time the animation would run.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;one&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;&amp;amp;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;one&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;ss&quot;&gt;animation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;animOneOne&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;forwards&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;animation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;animation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ease&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;ss&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;ss&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;ss&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;vg&quot;&gt;$color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;slate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;That’s basically it. There’s lots of CSS because I did the same thing over and over for each one. I’m thinking there’s probably a better way to do that by utilizing Sass functions or something. I’ll save that one for another day.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;And hey, don’t forget your -webkit- prefixes! You need them for Safari (so of course iOS). And keep in mind that animations are not supported for IE9 down. I make these mistakes so you don’t have to.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;References:&lt;br /&gt;
-&lt;a href=&quot;https://css-tricks.com/snippets/css/keyframe-animation-syntax/&quot; target=&quot;_blank&quot;&gt;CSS Tricks&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations&quot; target=&quot;_blank&quot;&gt;MDN: CSS Animations&lt;/a&gt;&lt;/p&gt;
-</description>
-				<pubDate>Sat, 19 Sep 2015 08:00:00 -0700</pubDate>
-				<link>http://carolyncodes.com/css3-animations/2015/09/19/css3-keyframes.html</link>
-				<guid isPermaLink="true">http://carolyncodes.com/css3-animations/2015/09/19/css3-keyframes.html</guid>
 				
 				
 				<category>css3-animations</category>

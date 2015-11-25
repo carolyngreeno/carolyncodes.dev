@@ -132,58 +132,62 @@ body {
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-h1, h2 {
-	line-height: 1.25;
-}
-h3, h4 {
-	line-height: 1.35;
-}
-h5, h6 {
-	line-height: 1.45;	
-}
 h1	{
+	font-family: $font-family-serif;
+	font-weight: $font-weight-normal; 
 	font-size: 2.75rem; 
-	font-family: $font-family-serif; 
-	font-weight: $font-weight-light; 
 	letter-spacing: -.05rem; 
+	line-height: 1.25;
 	margin-top: 0; 
 	margin-bottom: 1rem; 
 }
+
 h2 {
-	font-size: 2rem; 
-	font-family: $font-family-serif; 
+	font-family: $font-family-serif;
 	font-weight: $font-weight-light; 
+	font-size: 2rem; 
+	line-height: 1.25;
 	margin-top: 1.5em; 
 	margin-bottom: .25rem; 
 }
+
 h3 { 
-	font-size: 1.75rem; 
-	font-family: $font-family-serif; 
+	font-family: $font-family-serif;
 	font-weight: $font-weight-light; 
+	font-size: 1.75rem; 
+	line-height: 1.35;
 	margin-top: 0; 
 	margin-bottom: .375rem; 
 }
+
 h4 {
+	font-family: $font-family-sansserif;
+	font-weight: $font-weight-bold; 
 	font-size: 1.5rem; 
-	font-family: $font-family-serif; 
-	font-weight: $font-weight-light; 
-	font-style: italic;
+	text-transform: uppercase;
+	line-height: 1.35;
 	margin-top: 0; 
 	margin-bottom: .25rem; 
 }
-h5, h6 {
-	font-family: $font-family-sansserif; 
-	text-transform: uppercase; 
-	letter-spacing: .1rem; 
-	margin-top: 0; 
-	margin-bottom: .25rem; }
+
 h5 {
-	font-size: 1rem; 
-	font-weight: $font-weight-bold;
+	font-family: $font-family-sansserif;
+	font-weight: $font-weight-light;
+	font-size: 1.25rem; 
+	line-height: 1.45;	
+	text-transform: uppercase; 
+	letter-spacing: .05rem; 
+	margin-top: 0; 
+	margin-bottom: .25rem;
 }
+
 h6 {
-	font-size: .75rem; 
-	font-weight: $font-weight-normal; 
+	font-family: $font-family-serif;
+	font-weight: $font-weight-bold; 
+	font-size: 1.125rem; 
+	line-height: 1.45;	
+	margin-top: 1em; 
+	margin-bottom: .25rem;
 }
 
 /* Larger than phablet */
