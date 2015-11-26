@@ -1,8 +1,10 @@
 ---
 layout: page
-title: Privacy Policy
+title: 
 permalink: /privacy/
 ---
+
+# Privacy Policy
 
 This privacy policy discloses the privacy practices for [carolyncodes.com](http://carolyncodes.com/). This privacy policy applies solely to information collected by this web site. It will notify you of the following:
 
