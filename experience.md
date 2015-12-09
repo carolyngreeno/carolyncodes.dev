@@ -4,5 +4,5 @@ title: Experience
 permalink: /experience/
 ---
 
-{% include experience.html %}
-{% include post-list-aside.html %}
+{% include page-experience.html %}
+<!-- {% include post-list-aside.html %} -->

@@ -34,6 +34,9 @@
 body {
 
 	&.pink {
+		h1 {
+			color: $color-pink;
+		}
 		a.logo--header {
 			span {
 				&:last-child {
@@ -82,8 +85,10 @@ body {
 		}
 	}
 
-
 	&.gold {
+		h1 {
+			color: $color-gold;
+		}
 		a.logo--header {
 			span {
 				&:last-child {
@@ -132,8 +137,10 @@ body {
 		}
 	}
 
-
 	&.blue {
+		h1 {
+			color: $color-blue;
+		}
 		a.logo--header {
 			span {
 				&:last-child {

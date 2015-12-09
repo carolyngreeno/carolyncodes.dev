@@ -9,23 +9,14 @@ description: > # this means to ignore newlines until "baseurl:"
   well as creating successful web presences for small businesses.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://carolyncodes.com" # the base hostname & protocol for your site
+paginate: 5
+paginate_path: "/blog/page:num/"
 # twitter_username: jekyllrb
 github_username: carolynvelez
+timezone:		America/Vancouver
+locale:			en_us
+fb_admins:		http://facebook.com/carolyn.g.velez
 
 # Build settings
 markdown: kramdown
 gems: ["jekyll/minibundle"]
-
-# FB Open Graph
-timezone:		UTC/GMT						# eg. Asia/Kathmandu
-locale:			your locale language		# eg. en_us
-baseurl:		"/base"						# does not include hostname
-url:			"http://yoursitename.com"	# URL of site, include http://, do not include a trailing slash
-name:			"your site name"
-description:	"your site description"
-icon:			your site icon path			# /assets/img/icon.png [best 300px X 300px]
-author:
-	facebook:	username
-fb_admins:		http://facebook.com/carolyn.g.velez
-# fb_appid:		your facebook app id
-

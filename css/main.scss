@@ -6,7 +6,7 @@
 
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic|Open+Sans:300,700|Special+Elite');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic|Open+Sans:300,400,600,700|Special+Elite');
 
 // Our variables
 $font-family-serif:		'Lora', Georgia, 'Times New Poman', serif;
@@ -18,6 +18,7 @@ $small-font-size:		$base-font-size * 0.875;
 $base-line-height:		1.5;
 
 $font-weight-bold: 		700;
+$font-weight-semibold: 	600;
 $font-weight-normal:	400;
 $font-weight-light:		300;
 
@@ -65,13 +66,16 @@ $color-gray-dark:		darken($color-black, 25%);
 }
 
 @mixin border-x($font-size, $letter-spacing) {
+	position: relative;
+	width: 100%;
+	min-height: 1px;
 	margin-top: 0;
 	margin-bottom: 0;
-	overflow: hidden;
 	margin-right: 0;
 	margin-left: 0;
 	padding: 0;
 	line-height: 1;
+	overflow: hidden;
 
 	&:after {
 		font-size: $font-size;
@@ -89,11 +93,12 @@ $color-gray-dark:		darken($color-black, 25%);
 	"normalize"					, 
 	"skeleton"					, 
 	"syntax-highlighting"		, 
-	"base"				, 
-	"header"			, 
-	"posts"			, 
-	"contact"			, 
-	"footer"			,
-	"about-me" 		,
-	"color-switcher" 
+	"base"						, 
+	"header"					, 
+	"posts"						, 
+	"footer"					,
+	"color-switcher" 			,
+	"page-contact"				,	
+	"page-experience" 			,
+	"page-skills"
 ;

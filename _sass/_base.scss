@@ -3,6 +3,10 @@
 	box-sizing: border-box;
 }
 
+header h1 {
+	margin-bottom: 2rem;
+}
+
 p, ul, ol {
 	margin-bottom: 1em;
 }
@@ -27,6 +31,10 @@ li {
 	font-size: 1.125rem;
 	font-weight: 300;
 	line-height: 1.75;
+}
+
+hr {
+	@include border-x(5em, 5em);
 }
 
 .border {
@@ -75,6 +83,9 @@ li {
 	display: block;
 }
 
+.show-mobile {
+	display: none;
+}
 
 @media (max-width: 768px) {
 
@@ -83,7 +94,7 @@ li {
 	}
 
 	.show-mobile {
-		display: block;
+		display: inherit;
 	}
 
 	.border-right, .border-left {
