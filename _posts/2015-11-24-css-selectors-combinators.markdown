@@ -3,6 +3,7 @@ layout: post
 title:  "CSS Selectors: Combinators"
 date:   2015-11-24 16:00:00
 categories: css
+featured_image: /assets/posts/thumb_2015-11-24.png
 ---
 
 There are a lot of times when we don't have control over the markup. Here's another way to have more control over targeting your content using selectors. 

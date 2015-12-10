@@ -1098,10 +1098,6 @@ hr {
 .column--brain-icon {
   text-align: center; }
 
-.rss-subscribe {
-  font-style: italic;
-  margin: 2rem 0 3rem; }
-
 .show-full {
   display: block; }
 
@@ -1279,8 +1275,7 @@ hr {
 
 .post-meta {
   font-size: 14px;
-  color: #31424c;
-  margin: -1rem 0 2rem .25rem; }
+  color: #31424c; }
 
 .post-list--main {
   padding: 1em 2em;
@@ -1290,6 +1285,8 @@ hr {
     border-top: dotted 1px #ddd; }
     .post-list--main h6:first-child {
       border-top: none; }
+  .post-list--main h2 {
+    margin-bottom: .125em; }
 
 .footer--main {
   margin-top: 0;
@@ -1470,6 +1467,19 @@ body.blue .post-list--main, body.blue .post-list--aside {
     background-position: -130px 0 !important; }
   body.blue a.logo--header span:last-child {
     background-position: -260px 0 !important; } }
+ul.pagination {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.125em;
+  list-style: none; }
+  ul.pagination li {
+    float: left;
+    padding: 0 15px; }
+
+.rss-subscribe {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: .875em;
+  margin: 1rem 0; }
+
 .page-contact a img {
   float: none;
   width: 40px;

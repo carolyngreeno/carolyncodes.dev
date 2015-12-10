@@ -1,0 +1,17 @@
+ul.pagination {
+	font-family: $font-family-sansserif;
+	font-size: 1.125em;
+	list-style: none;
+
+	li {
+		float: left;
+		padding: 0 15px;
+	}
+}
+
+
+.rss-subscribe {
+	font-family: $font-family-sansserif;
+	font-size: .875em;
+	margin: 1rem 0;
+}

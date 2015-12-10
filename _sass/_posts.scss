@@ -23,7 +23,7 @@
 .post-meta {
 	font-size: $small-font-size;
 	color: $text-color;
-	margin: -1rem 0 2rem .25rem;
+	// margin: -1rem 0 2rem .25rem;
 }
 
 .post-list {
@@ -39,6 +39,10 @@
 			&:first-child {
 				border-top: none;
 			}
+		}
+
+		h2 {
+			margin-bottom: .125em;
 		}
 	}
 

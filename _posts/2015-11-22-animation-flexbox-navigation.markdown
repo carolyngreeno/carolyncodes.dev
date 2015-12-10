@@ -3,6 +3,7 @@ layout: post
 title:  "Minimal Navigation Solution with Flexbox and Animation"
 date:   2015-11-22 16:00:00
 categories: css
+featured_image: /assets/posts/thumb_2015-11-22.png
 ---
 
 I was inspired to create a kind of minimalist navigation using CSS3's Flexbox and animation properties. As a designer I like the trend of using a very lean main navigation and directing users on how to find what they need in a more creative and perhaps intuitive way.

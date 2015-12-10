@@ -19,4 +19,5 @@ fb_admins:		http://facebook.com/carolyn.g.velez
 
 # Build settings
 markdown: kramdown
-gems: ["jekyll/minibundle"]
+gems: [jekyll/minibundle]
+gems: [jekyll-paginate]
